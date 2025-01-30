@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "DaengDaengRun.sln"
+    "dotnet.defaultSolution": "game-project.sln"
 }
