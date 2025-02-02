@@ -43,6 +43,18 @@ public class Player : MonoBehaviour
     //     }
     // }
 
+     void OnMove(InputValue value)
+    {
+        inputVec = value.Get<Vector2>();
+    }
+
+    void LateUpdate()
+    {
+        if (inputVec.x != 0){
+            spriter.flipX = inputVec.x < 0;
+        }
+    }
+
     private int collisionCount = 0;
     private int maxCollision = 3;
 
