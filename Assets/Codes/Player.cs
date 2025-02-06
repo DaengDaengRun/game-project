@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.SearchService;
 using UnityEngine;
+using System;
 using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
@@ -53,7 +54,7 @@ public class Player : MonoBehaviour
     void LateUpdate()
     {
         if (inputVec.x != 0){
-            spriter.flipX = inputVec.x < 0;
+            spriteRenderer.flipX = inputVec.x < 0;
         }
     }
 
