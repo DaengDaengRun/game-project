@@ -13,7 +13,8 @@ public class Player : MonoBehaviour
     public float speed;
     // 물리적 변화
     Rigidbody2D rigid;
-    SpriteRenderer spriter;
+
+
     private SpriteRenderer spriteRenderer;
     private Sprite originalSprite;  // 기존 캐릭터
     public Sprite sickDogSprite;    // 적과 충돌 시 나타나는 캐릭터
