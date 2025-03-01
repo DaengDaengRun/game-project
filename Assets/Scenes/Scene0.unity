@@ -120,8 +120,11 @@ NavMeshSettings:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &192040081
 =======
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
 --- !u!1 &128607539
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,12 +165,16 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &128607541
+<<<<<<< HEAD
 >>>>>>> 70a06a1 (chore: Time GUI, 종료 후 버튼 추가한 Scene)
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -198,6 +205,8 @@ MonoBehaviour:
   m_Flags: 3
   m_ColliderType: 1
 =======
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
   m_GameObject: {fileID: 128607539}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -351,7 +360,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 >>>>>>> 70a06a1 (chore: Time GUI, 종료 후 버튼 추가한 Scene)
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
 --- !u!1 &345656925
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,9 +582,12 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &359516835
 =======
 =======
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
 --- !u!1 &371535710
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,7 +721,10 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371535710}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 >>>>>>> 70a06a1 (chore: Time GUI, 종료 후 버튼 추가한 Scene)
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
 --- !u!1 &436971273
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,12 +764,16 @@ RectTransform:
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &436971275
+<<<<<<< HEAD
 >>>>>>> 451bf7e (feat: Scene0에 화살표 추가)
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -784,6 +806,8 @@ MonoBehaviour:
 --- !u!213 &380747596
 Sprite:
 =======
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
   m_GameObject: {fileID: 436971273}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -796,11 +820,15 @@ Sprite:
   hideDistance: 1.5
 --- !u!114 &436971276
 MonoBehaviour:
+<<<<<<< HEAD
 >>>>>>> 451bf7e (feat: Scene0에 화살표 추가)
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Name: 
   m_Rect:
@@ -1008,6 +1036,8 @@ MonoBehaviour:
   m_ScriptableObjects: []
   m_SpriteID: 
 =======
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
   m_GameObject: {fileID: 436971273}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1040,7 +1070,10 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436971273}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 >>>>>>> 451bf7e (feat: Scene0에 화살표 추가)
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
 --- !u!1 &549572888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,7 +1218,10 @@ RectTransform:
 =======
   m_Children:
   - {fileID: 436971274}
+<<<<<<< HEAD
 >>>>>>> 451bf7e (feat: Scene0에 화살표 추가)
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1195,9 +1231,12 @@ RectTransform:
   m_Pivot: {x: 0, y: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &659331517
 =======
 =======
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
 --- !u!1 &660408663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,10 +1362,68 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660408663}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
+=======
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
+  m_Father: {fileID: 1080103488}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -309, y: 205}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &765347753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 765347755}
+  - component: {fileID: 765347754}
+  m_Layer: 0
+  m_Name: RandomPrefabSpawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &765347754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765347753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ed67ac7cc3e40119c3d14e8793ea93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 7344847215255351884, guid: da49fdd2aa1cd43d5ab5dde74d85a327, type: 3}
+  minX: -5
+  maxX: 5
+  minY: -3
+  maxY: 3
+--- !u!4 &765347755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765347753}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+<<<<<<< HEAD
   m_Father: {fileID: 1080103488}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1353,11 +1450,236 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &765347754
+=======
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &882713423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 882713426}
+  - component: {fileID: 882713425}
+  - component: {fileID: 882713424}
+  m_Layer: 5
+  m_Name: GameOverPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &882713424
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882713423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &882713425
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882713423}
+  m_CullTransparentMesh: 1
+--- !u!224 &882713426
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882713423}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 371535711}
+  - {fileID: 1110770488}
+  m_Father: {fileID: 128607540}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1080103484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1080103488}
+  - component: {fileID: 1080103487}
+  - component: {fileID: 1080103486}
+  - component: {fileID: 1080103485}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1080103485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080103484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1080103486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080103484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1080103487
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080103484}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1080103488
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080103484}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 660408666}
+  - {fileID: 1493010494}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!1 &1110770487
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1110770488}
+  - component: {fileID: 1110770491}
+  - component: {fileID: 1110770490}
+  - component: {fileID: 1110770489}
+  m_Layer: 5
+  m_Name: GoToMainButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1110770488
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110770487}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2028809856}
+  m_Father: {fileID: 882713426}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 120, y: 0}
+  m_SizeDelta: {x: 200, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1110770489
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 765347753}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1412,11 +1734,65 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &882713424
+=======
+  m_GameObject: {fileID: 1110770487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1110770490}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 231768695}
+        m_TargetAssemblyTypeName: GameOverManager, Assembly-CSharp
+        m_MethodName: GoToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1110770490
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 882713423}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1674,6 +2050,8 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
   m_GameObject: {fileID: 1110770487}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1722,12 +2100,17 @@ GameObject:
 >>>>>>> 70a06a1 (chore: Time GUI, 종료 후 버튼 추가한 Scene)
   m_Layer: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: ChestnutSpawner
   m_TagString: Untagged
 =======
   m_Name: Enemy
   m_TagString: Enemy
 >>>>>>> 4c20b46 (docs: 집 랜덤 스폰 파일 추가)
+=======
+  m_Name: Enemy
+  m_TagString: Enemy
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2524,18 +2907,25 @@ Sprite:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 3.4426703, y: 0.020411309, z: 0.032797094}
 =======
   m_LocalPosition: {x: 3.84, y: 2.07, z: 0}
 >>>>>>> 4c20b46 (docs: 집 랜덤 스폰 파일 추가)
+=======
+  m_LocalPosition: {x: 3.84, y: 2.07, z: 0}
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &705910136
 =======
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
 --- !u!1 &1275066933
 GameObject:
   m_ObjectHideFlags: 0
@@ -2574,12 +2964,16 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1275066935
+<<<<<<< HEAD
 >>>>>>> 70a06a1 (chore: Time GUI, 종료 후 버튼 추가한 Scene)
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -3034,6 +3428,8 @@ Sprite:
 --- !u!213 &731296245
 Sprite:
 =======
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
   m_GameObject: {fileID: 1275066933}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3121,11 +3517,15 @@ Sprite:
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1275066936
 CanvasRenderer:
+<<<<<<< HEAD
 >>>>>>> 70a06a1 (chore: Time GUI, 종료 후 버튼 추가한 Scene)
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Name: 
   m_Rect:
@@ -4282,6 +4682,10 @@ Sprite:
   m_GameObject: {fileID: 1275066933}
   m_CullTransparentMesh: 1
 >>>>>>> 70a06a1 (chore: Time GUI, 종료 후 버튼 추가한 Scene)
+=======
+  m_GameObject: {fileID: 1275066933}
+  m_CullTransparentMesh: 1
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
 --- !u!1 &1308789963
 GameObject:
   m_ObjectHideFlags: 0
@@ -4332,16 +4736,22 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!213 &1356413565
 Sprite:
 =======
 --- !u!1 &1493010493
 GameObject:
 >>>>>>> 70a06a1 (chore: Time GUI, 종료 후 버튼 추가한 Scene)
+=======
+--- !u!1 &1493010493
+GameObject:
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Name: 
   m_Rect:
@@ -4549,6 +4959,8 @@ GameObject:
   m_ScriptableObjects: []
   m_SpriteID: 
 =======
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1493010494}
@@ -4679,7 +5091,10 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1493010493}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 >>>>>>> 70a06a1 (chore: Time GUI, 종료 후 버튼 추가한 Scene)
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
 --- !u!1 &1571419278
 GameObject:
   m_ObjectHideFlags: 0
@@ -5763,10 +6178,14 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1800498862
 =======
 --- !u!1 &2028809855
 >>>>>>> 70a06a1 (chore: Time GUI, 종료 후 버튼 추가한 Scene)
+=======
+--- !u!1 &2028809855
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5775,22 +6194,29 @@ GameObject:
   serializedVersion: 6
   m_Component:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 1800498864}
   - component: {fileID: 1800498863}
   m_Layer: 0
   m_Name: KeySpawner
 =======
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
   - component: {fileID: 2028809856}
   - component: {fileID: 2028809858}
   - component: {fileID: 2028809857}
   m_Layer: 5
   m_Name: Text (TMP)
+<<<<<<< HEAD
 >>>>>>> 70a06a1 (chore: Time GUI, 종료 후 버튼 추가한 Scene)
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!114 &1800498863
 MonoBehaviour:
@@ -5798,10 +6224,15 @@ MonoBehaviour:
 --- !u!224 &2028809856
 RectTransform:
 >>>>>>> 70a06a1 (chore: Time GUI, 종료 후 버튼 추가한 Scene)
+=======
+--- !u!224 &2028809856
+RectTransform:
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_GameObject: {fileID: 1800498862}
   m_Enabled: 1
@@ -6112,6 +6543,8 @@ Sprite:
   m_SpriteID: 
 --- !u!114 &1990416571
 =======
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
   m_GameObject: {fileID: 2028809855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -6126,12 +6559,16 @@ Sprite:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2028809857
+<<<<<<< HEAD
 >>>>>>> 70a06a1 (chore: Time GUI, 종료 후 버튼 추가한 Scene)
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -6407,6 +6844,8 @@ Sprite:
   m_ScriptableObjects: []
   m_SpriteID: 
 =======
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
   m_GameObject: {fileID: 2028809855}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -6500,7 +6939,10 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028809855}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 >>>>>>> 70a06a1 (chore: Time GUI, 종료 후 버튼 추가한 Scene)
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
 --- !u!1 &2079579271
 GameObject:
   m_ObjectHideFlags: 0
@@ -21525,12 +21967,18 @@ SceneRoots:
   - {fileID: 349047075}
   - {fileID: 549572890}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 2092684187}
   - {fileID: 659331519}
   - {fileID: 1800498864}
 =======
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
   - {fileID: 198594658}
   - {fileID: 1080103488}
   - {fileID: 128607540}
   - {fileID: 231768696}
+<<<<<<< HEAD
 >>>>>>> 70a06a1 (chore: Time GUI, 종료 후 버튼 추가한 Scene)
+=======
+>>>>>>> 29109294898566a15f03573d7dd735e1f7cdd920
