@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.SearchService;
@@ -12,7 +13,7 @@ public class Player : MonoBehaviour
     public float speed;
     // 물리적 변화
     Rigidbody2D rigid;
-    SpriteRenderer spriter;
+
 
     private SpriteRenderer spriteRenderer;
     private Sprite originalSprite;  // 기존 캐릭터
@@ -34,7 +35,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate(){
         // 물리 프레임 하나만큼 소비된 시간 - fixedDeltaTime
-        Vector2 nextVec = inputVec * speed * Time.fixedDeltaTime;
+        Vector2 nextVec = inputVec.normalized * speed * Time.fixedDeltaTime;
  
         // 3. 위치 이동 (현재 위치 + 위치 이동값)
         rigid.MovePosition(rigid.position + nextVec);
