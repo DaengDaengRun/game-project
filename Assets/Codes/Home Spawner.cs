@@ -1,15 +1,15 @@
 using System.Collections;
 using UnityEngine;
 
-public class KeySpawner : MonoBehaviour
+public class HomeSpawner : MonoBehaviour
 {
-    public GameObject itemPrefab; // 열쇠 프리팹
+    public GameObject homePrefab; // 🏠 집 프리팹
     public float minX = -10f, maxX = 10f;
     public float minY = -8f, maxY = 8f;
-    public float minDistance = 8f;  // 🔥 플레이어와 최소 거리 (이 값을 반드시 유지)
-    public float maxDistance = 17f;  // 🔥 플레이어와 최대 거리
+    public float minDistance = 5f;  // 🔥 최소 거리 조정 (너무 크지 않도록)
+    public float maxDistance = 15f;  // 🔥 최대 거리 조정
     private static bool hasSpawned = false;
-    private GameObject spawnedKey;
+    private GameObject spawnedHome;
 
     private Transform player; // 🔥 플레이어 위치
 
@@ -23,6 +23,7 @@ public class KeySpawner : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         hasSpawned = true;
     }
+
 
     void Start()
     {
@@ -38,16 +39,16 @@ public class KeySpawner : MonoBehaviour
             return;
         }
 
-        if (itemPrefab == null)
+        if (homePrefab == null)
         {
-            Debug.LogError("⚠️ itemPrefab이 설정되지 않았습니다!");
+            Debug.LogError("⚠️ homePrefab이 설정되지 않았습니다!");
             return;
         }
 
-        SpawnRandomKey();
+        SpawnRandomHome();
     }
 
-    void SpawnRandomKey()
+    void SpawnRandomHome()
     {
         Vector2 randomPosition;
         int attempts = 0;
@@ -55,9 +56,8 @@ public class KeySpawner : MonoBehaviour
 
         do
         {
-            // 🔥 플레이어의 위치를 기준으로 일정 거리 이상 떨어진 위치를 찾음
             float angle = Random.Range(0f, 360f) * Mathf.Deg2Rad; // 🔥 360도 방향 중 랜덤 선택
-            float distance = Random.Range(minDistance, maxDistance); // 🔥 거리도 랜덤 (minDistance 이상)
+            float distance = Random.Range(minDistance, maxDistance); // 🔥 거리 랜덤 설정
 
             // 🔥 방향과 거리 기반으로 위치 계산
             float randomX = player.position.x + Mathf.Cos(angle) * distance;
@@ -68,17 +68,17 @@ public class KeySpawner : MonoBehaviour
 
             if (attempts >= maxAttempts)
             {
-                Debug.LogError("⚠️ 적절한 열쇠 위치를 찾지 못했습니다. min/max 설정을 확인하세요.");
+                Debug.LogError("⚠️ 적절한 집 위치를 찾지 못했습니다. min/max 설정을 확인하세요.");
                 return;
             }
 
         } while (randomPosition.x < minX || randomPosition.x > maxX || randomPosition.y < minY || randomPosition.y > maxY);
 
-        // 🔥 열쇠 생성
-        spawnedKey = Instantiate(itemPrefab, randomPosition, Quaternion.identity);
-        spawnedKey.transform.position = randomPosition;
-        spawnedKey.SetActive(true);
+        // 🔥 집 생성
+        spawnedHome = Instantiate(homePrefab, randomPosition, Quaternion.identity);
+        spawnedHome.transform.position = randomPosition;
+        spawnedHome.SetActive(true);
 
-        Debug.Log($"📌 열쇠 생성! 위치: {randomPosition}, 플레이어와 거리: {Vector2.Distance(player.position, randomPosition)}");
+        Debug.Log($"🏠 집 생성! 위치: {randomPosition}, 플레이어와 거리: {Vector2.Distance(player.position, randomPosition)}");
     }
 }

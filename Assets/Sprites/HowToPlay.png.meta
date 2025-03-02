@@ -1,10 +1,34 @@
 fileFormatVersion: 2
-guid: 0a12ca7f6102441469d279c1d44a975b
+guid: e7146bd6bfdc04debb15e4d482b9ae65
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7443756053782179069
-    second: background_0
+      213: -27307904797611606
+    second: HowToPlay_0
+  - first:
+      213: -1649781349477682230
+    second: HowToPlay_1
+  - first:
+      213: -6209129121431149461
+    second: HowToPlay_2
+  - first:
+      213: 7366758881341988667
+    second: HowToPlay_3
+  - first:
+      213: 6886921639791165153
+    second: HowToPlay_4
+  - first:
+      213: -4221913582717029277
+    second: HowToPlay_5
+  - first:
+      213: -2878271556306509993
+    second: HowToPlay_6
+  - first:
+      213: 6392706351827264714
+    second: HowToPlay_7
+  - first:
+      213: 8974988128736816453
+    second: HowToPlay_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +70,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +150,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: background_0
+      name: HowToPlay_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 68
-        width: 32
-        height: 32
+        x: 31
+        y: 50
+        width: 113
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,184 +165,184 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 30356abce4772b890800000000000000
-      internalID: -7443756053782179069
+      spriteID: aa96af2fa9bfe9ff0800000000000000
+      internalID: -27307904797611606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_1
+      name: HowToPlay_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 68
-        width: 32
-        height: 32
+        x: 150
+        y: 50
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6713f0e7a5bdb494684a8f155c86d4d7
-      internalID: -1850157201
+      spriteID: ac371538a9cca19e0800000000000000
+      internalID: -1649781349477682230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_2
+      name: HowToPlay_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 68
-        width: 32
-        height: 32
+        x: 255
+        y: 50
+        width: 105
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f1dcc507096da4583bd33ba7e81c512f
-      internalID: 1446411530
+      spriteID: b64209026fdb4d9a0800000000000000
+      internalID: -6209129121431149461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_3
+      name: HowToPlay_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 36
-        width: 32
-        height: 32
+        x: 469
+        y: 50
+        width: 112
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 13d8fa1cd1a694dd5b102e6b9933ca18
-      internalID: 1891768776
+      spriteID: b3fd75cfb2cfb3660800000000000000
+      internalID: 7366758881341988667
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_4
+      name: HowToPlay_4
       rect:
         serializedVersion: 2
-        x: 32
-        y: 36
-        width: 32
-        height: 32
+        x: 588
+        y: 50
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fac49d2db6fb3406fa764ec275e516fc
-      internalID: 136126924
+      spriteID: 1eef3bf2eb2439f50800000000000000
+      internalID: 6886921639791165153
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_5
+      name: HowToPlay_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 36
-        width: 32
-        height: 32
+        x: 795
+        y: 50
+        width: 112
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2ca5f9f4120fb467a942aa8260cc216d
-      internalID: 193634023
+      spriteID: 36431c517ffb865c0800000000000000
+      internalID: -4221913582717029277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_6
+      name: HowToPlay_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 4
-        width: 32
-        height: 32
+        x: 913
+        y: 50
+        width: 91
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f603593538ce040e1a0f9c49734b3957
-      internalID: -121342918
+      spriteID: 75f5d3fe4435e08d0800000000000000
+      internalID: -2878271556306509993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_7
+      name: HowToPlay_7
       rect:
         serializedVersion: 2
-        x: 32
-        y: 4
-        width: 32
-        height: 32
+        x: 1010
+        y: 50
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5597dd28a40ff4da3a0663bd12053fc6
-      internalID: -1985200403
+      spriteID: ac42c069e8477b850800000000000000
+      internalID: 6392706351827264714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_8
+      name: HowToPlay_8
       rect:
         serializedVersion: 2
-        x: 64
-        y: 4
-        width: 32
-        height: 32
+        x: 1115
+        y: 50
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d35369ed414f348c593447e7e8a913c6
-      internalID: -1002572414
+      spriteID: 54da4bcc6209d8c70800000000000000
+      internalID: 8974988128736816453
       vertices: []
       indices: 
       edges: []
@@ -327,7 +351,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e7ed70eb5d77048a59868336dd22fd30
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -337,15 +361,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      background_0: -7443756053782179069
-      background_1: -1850157201
-      background_2: 1446411530
-      background_3: 1891768776
-      background_4: 136126924
-      background_5: 193634023
-      background_6: -121342918
-      background_7: -1985200403
-      background_8: -1002572414
+      HowToPlay_0: -27307904797611606
+      HowToPlay_1: -1649781349477682230
+      HowToPlay_2: -6209129121431149461
+      HowToPlay_3: 7366758881341988667
+      HowToPlay_4: 6886921639791165153
+      HowToPlay_5: -4221913582717029277
+      HowToPlay_6: -2878271556306509993
+      HowToPlay_7: 6392706351827264714
+      HowToPlay_8: 8974988128736816453
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
