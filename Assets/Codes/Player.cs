@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
     }
 
     private int collisionCount = 0;
-    private int maxCollision = 5;
+    private int maxCollision = 3;
     private bool isFind = false; // 뼈다귀를 찾았는지 여부
     public bool isHome = false; // 집에 도착했는지 여부
 
