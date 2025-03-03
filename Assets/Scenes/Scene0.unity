@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCountDown: 1
-  gameTime: 15
+  gameTime: 30
   isTimeOver: 0
   displayTime: 0
   gameTimeText: {fileID: 660408664}
@@ -1104,7 +1104,7 @@ GameObject:
   - component: {fileID: 765347754}
   m_Layer: 0
   m_Name: HomeSpawner
-  m_TagString: Untagged
+  m_TagString: Home
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2723,8 +2723,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputVec: {x: 0, y: 0}
-  speed: 3
+  speed: 10
   sickDogSprite: {fileID: -8814001216525429211, guid: 3363a7a9402a14a628582e2a6588dcfa, type: 3}
+  happyDogSprite: {fileID: 621882668730690745, guid: 6d8cd4ad6523043e59d27bd1c1e8435e, type: 3}
+  findDogSprite: {fileID: 2725912856223093629, guid: 9a5512f1c6af94a2d9849a6e55318bfc, type: 3}
 --- !u!70 &1745298233
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2872,7 +2874,7 @@ GameObject:
   - component: {fileID: 1798773021}
   m_Layer: 0
   m_Name: KeySpawner
-  m_TagString: Untagged
+  m_TagString: Bone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
