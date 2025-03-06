@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class HPManager : MonoBehaviour
 {
@@ -44,7 +45,7 @@ public class HPManager : MonoBehaviour
             GameOverManager gameOverManager = FindFirstObjectByType<GameOverManager>();
             if (gameOverManager != null)
             {
-                gameOverManager.ShowGameOverScreen();
+                SceneManager.LoadScene("GameOver");
             }
         }
     }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TimeController : MonoBehaviour{
@@ -11,7 +12,6 @@ public class TimeController : MonoBehaviour{
     public float displayTime = 0;   // 표시 시간
     public TMP_Text gameTimeText;
     public TMP_Text successTimeText; // 게임 종료 후 성공 시간 표시 UI
-    public GameOverManager gameOverManager;
     private float finalTime = 0;     // 게임 종료 후 저장될 최종 시간
 
     float times = 0;                // 현재 시간
@@ -28,6 +28,7 @@ public class TimeController : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
+        GameOverManager gameOverManager = FindFirstObjectByType<GameOverManager>();
         if (!isTimeOver){
             times += Time.deltaTime;
 
@@ -56,7 +57,14 @@ public class TimeController : MonoBehaviour{
             }
 
             hasLoggedGameOver = true;
-            gameOverManager.ShowGameOverScreen(); // 게임 종료 UI 표시
+            if (gameOverManager != null)
+            {
+                SceneManager.LoadScene("GameOver");
+            }
+            else
+            {
+                Debug.LogError("⚠️ GameOverManager를 찾을 수 없습니다! 씬에 추가하세요.");
+            }
         }
     }
     void ShowSuccessTime(){
