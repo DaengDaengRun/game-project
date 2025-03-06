@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -67,54 +68,46 @@ public class Player : MonoBehaviour
     private bool isFind = false; // 뼈다귀를 찾았는지 여부
     public bool isHome = false; // 집에 도착했는지 여부
 
-    void OnCollisionEnter2D(Collision2D collision){
-        if(collision.gameObject.CompareTag("Enemy")){
-            Debug.Log("⚠️ Enemy와 충돌! 상태: Sick");
-            spriteRenderer.sprite = sickDogSprite;
-            collisionCount++;  // 충돌 횟수 증가
+void OnCollisionEnter2D(Collision2D collision){
+    if (collision.gameObject.CompareTag("Enemy")){
+        Debug.Log("⚠️ Enemy와 충돌! 상태: Sick");
+        spriteRenderer.sprite = sickDogSprite;
+        collisionCount++;  // 충돌 횟수 증가
 
-            // 🎯 HP 감소 UI 업데이트 호출
-            HPManager hpManager = HPManager.GetInstance();
-            if (hpManager != null)
-            {
-                hpManager.DecreaseHP(); // HP 감소
-            }
-
-
-            if (collisionCount >= maxCollision){
-                Debug.Log("💀 Player가 죽었습니다!");
-                Destroy(gameObject);  // 플레이어 오브젝트 제거
-            }
-        }
-        else if (collision.gameObject.CompareTag("Bone")){
-            Debug.Log("🍖 Player가 뼈다귀를 찾았습니다!");
-            spriteRenderer.sprite = findDogSprite;
-            isFind = true;
-        }
-        else if (collision.gameObject.CompareTag("Home")){
-            if(isFind){
-                Debug.Log("🏠 Player가 집에 도착했습니다!");
-                spriteRenderer.sprite = happyDogSprite;
-                isHome = true;
-
-                // 🎯 게임 종료 화면 표시
-                GameOverManager gameOverManager = FindFirstObjectByType<GameOverManager>();
-                if (gameOverManager != null)
-                {
-                    gameOverManager.ShowGameOverScreen();
-                }
-                else
-                {
-                    Debug.LogError("⚠️ GameOverManager를 찾을 수 없습니다! 씬에 추가하세요.");
-                }
-            }
-            else {
-                Debug.Log("🍖❌ 뼈다귀를 찾아오세요!");
-                return;
-            }
+        // 🎯 HP 감소 UI 업데이트 호출
+        HPManager hpManager = HPManager.GetInstance();
+        if (hpManager != null)
+        {
+            hpManager.DecreaseHP(); // HP 감소
         }
 
+        if (collisionCount >= maxCollision){
+            Debug.Log("💀 Player가 죽었습니다! GameOver 씬으로 이동");
+            // 현재 씬의 Build Index 저장
+            PlayerPrefs.SetInt("LastScene", SceneManager.GetActiveScene().buildIndex);
+            PlayerPrefs.Save();
+            SceneManager.LoadScene("GameOver");
+            return;
+        }
     }
+    else if (collision.gameObject.CompareTag("Bone")){
+        Debug.Log("🍖 Player가 뼈다귀를 찾았습니다!");
+        spriteRenderer.sprite = findDogSprite;
+        isFind = true;
+    }
+    else if (collision.gameObject.CompareTag("Home")){
+        if (isFind){
+            Debug.Log("🏠 Player가 집에 도착했습니다! GameOver 씬으로 이동");
+            spriteRenderer.sprite = happyDogSprite;
+            isHome = true;
+            SceneManager.LoadScene("GameOver");
+        }
+        else {
+            Debug.Log("🍖❌ 뼈다귀를 찾아오세요!");
+        }
+    }
+}
+
 
     void OnCollisionExit2D(Collision2D collision){
         if (collision.gameObject.CompareTag("Enemy")){
