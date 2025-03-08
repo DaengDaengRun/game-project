@@ -8,12 +8,14 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance; // 싱글턴 패턴 적용
+    public bool isDead = false; // 캐릭터 사망 여부
+
     // 움직임을 위한 인풋 변수 (상하좌우)
     public Vector2 inputVec;
     public float speed;
     // 물리적 변화
     Rigidbody2D rigid;
-
 
     private SpriteRenderer spriteRenderer;
     private Sprite originalSprite;  // 기존 캐릭터
@@ -21,9 +23,11 @@ public class Player : MonoBehaviour
     public Sprite happyDogSprite;    // 집 찾으면 나타나는 캐릭터
     public Sprite findDogSprite;    // 뼈다귀 찾으면 나타나는 캐릭터
 
-
-
     void Awake(){
+        if (instance == null)
+        {
+            instance = this;
+        }        
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalSprite = spriteRenderer.sprite;  // 초기 스프라이트 저장
@@ -82,6 +86,8 @@ void OnCollisionEnter2D(Collision2D collision){
         }
 
         if (collisionCount >= maxCollision){
+            isDead = true;
+            PlayerPrefs.SetInt("IsPlayerDead", 1); // 사망 여부 저장 (1 = 죽음)
             Debug.Log("💀 Player가 죽었습니다! GameOver 씬으로 이동");
             // 현재 씬의 Build Index 저장
             PlayerPrefs.SetInt("LastScene", SceneManager.GetActiveScene().buildIndex);
@@ -94,6 +100,8 @@ void OnCollisionEnter2D(Collision2D collision){
         Debug.Log("🍖 Player가 뼈다귀를 찾았습니다!");
         spriteRenderer.sprite = findDogSprite;
         isFind = true;
+        // 뼈다귀 오브젝트 제거
+        Destroy(collision.gameObject);
     }
     else if (collision.gameObject.CompareTag("Home")){
         if (isFind){
