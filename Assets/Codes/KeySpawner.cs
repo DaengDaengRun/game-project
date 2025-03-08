@@ -10,6 +10,7 @@ public class KeySpawner : MonoBehaviour
     public float maxDistance = 17f;  // 🔥 플레이어와 최대 거리
     private static bool hasSpawned = false;
     private GameObject spawnedKey;
+    public BoxCollider2D mapBounds;
 
     private Transform player; // 🔥 플레이어 위치
 
@@ -72,7 +73,7 @@ public class KeySpawner : MonoBehaviour
                 return;
             }
 
-        } while (randomPosition.x < minX || randomPosition.x > maxX || randomPosition.y < minY || randomPosition.y > maxY);
+        } while (!IsInsideMap(randomPosition));
 
         // 🔥 열쇠 생성
         spawnedKey = Instantiate(itemPrefab, randomPosition, Quaternion.identity);
@@ -80,5 +81,16 @@ public class KeySpawner : MonoBehaviour
         spawnedKey.SetActive(true);
 
         Debug.Log($"📌 열쇠 생성! 위치: {randomPosition}, 플레이어와 거리: {Vector2.Distance(player.position, randomPosition)}");
+
+         ArrowIndicator arrowIndicator = FindFirstObjectByType<ArrowIndicator>();
+         arrowIndicator.SetBoneTarget(spawnedKey.transform);
+    }
+    
+    // ✅ 특정 위치가 맵 범위 안에 있는지 확인하는 함수
+    bool IsInsideMap(Vector2 position)
+    {
+        Bounds bounds = mapBounds.bounds;
+        return position.x >= bounds.min.x && position.x <= bounds.max.x &&
+               position.y >= bounds.min.y && position.y <= bounds.max.y;
     }
 }

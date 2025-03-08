@@ -10,6 +10,7 @@ public class HomeSpawner : MonoBehaviour
     public float maxDistance = 15f;  // 🔥 최대 거리 조정
     private static bool hasSpawned = false;
     private GameObject spawnedHome;
+    public BoxCollider2D mapBounds;
 
     private Transform player; // 🔥 플레이어 위치
 
@@ -72,7 +73,7 @@ public class HomeSpawner : MonoBehaviour
                 return;
             }
 
-        } while (randomPosition.x < minX || randomPosition.x > maxX || randomPosition.y < minY || randomPosition.y > maxY);
+        } while (!IsInsideMap(randomPosition));
 
         // 🔥 집 생성
         spawnedHome = Instantiate(homePrefab, randomPosition, Quaternion.identity);
@@ -80,5 +81,13 @@ public class HomeSpawner : MonoBehaviour
         spawnedHome.SetActive(true);
 
         Debug.Log($"🏠 집 생성! 위치: {randomPosition}, 플레이어와 거리: {Vector2.Distance(player.position, randomPosition)}");
+    }
+
+        // ✅ 특정 위치가 맵 범위 안에 있는지 확인하는 함수
+    bool IsInsideMap(Vector2 position)
+    {
+        Bounds bounds = mapBounds.bounds;
+        return position.x >= bounds.min.x && position.x <= bounds.max.x &&
+               position.y >= bounds.min.y && position.y <= bounds.max.y;
     }
 }
