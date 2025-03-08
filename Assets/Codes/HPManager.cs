@@ -14,15 +14,7 @@ public class HPManager : MonoBehaviour
 
     void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        instance = this;
     }
 
     void Start()
@@ -50,7 +42,7 @@ public class HPManager : MonoBehaviour
         }
     }
 
-    // 🔹 HP UI 업데이트 함수 (아이콘 조절)
+    // HP UI 업데이트 함수 (아이콘 조절)
     private void UpdateHPUI()
     {
         // 기존 HP 아이콘 제거
@@ -69,7 +61,7 @@ public class HPManager : MonoBehaviour
         }
     }
 
-    // 🔹 다른 스크립트에서 HP 감소 기능 호출 가능
+    // 다른 스크립트에서 HP 감소 기능 호출 가능
     public static HPManager GetInstance()
     {
         return instance;
