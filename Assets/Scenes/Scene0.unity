@@ -675,7 +675,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrowUI: {fileID: 436971274}
   player: {fileID: 1745298236}
-  boneTarget: {fileID: 765347755}
+  boneTarget: {fileID: 1798773022}
   hideDistance: 1.5
 --- !u!114 &436971276
 MonoBehaviour:

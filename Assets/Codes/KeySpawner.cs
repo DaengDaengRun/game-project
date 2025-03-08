@@ -80,5 +80,8 @@ public class KeySpawner : MonoBehaviour
         spawnedKey.SetActive(true);
 
         Debug.Log($"📌 열쇠 생성! 위치: {randomPosition}, 플레이어와 거리: {Vector2.Distance(player.position, randomPosition)}");
+
+         ArrowIndicator arrowIndicator = FindFirstObjectByType<ArrowIndicator>();
+         arrowIndicator.SetBoneTarget(spawnedKey.transform);
     }
 }
