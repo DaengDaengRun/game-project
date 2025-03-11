@@ -108,7 +108,7 @@ void OnCollisionEnter2D(Collision2D collision){
             Debug.Log("🏠 Player가 집에 도착했습니다! GameOver 씬으로 이동");
             spriteRenderer.sprite = happyDogSprite;
             isHome = true;
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("Success");
         }
         else {
             Debug.Log("🍖❌ 뼈다귀를 찾아오세요!");
