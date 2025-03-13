@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
     public Sprite sickDogSprite;    // 적과 충돌 시 나타나는 캐릭터
     public Sprite happyDogSprite;    // 집 찾으면 나타나는 캐릭터
     public Sprite findDogSprite;    // 뼈다귀 찾으면 나타나는 캐릭터
+    public GameObject GetBoneWarning;
+    public float warningDisplayTime = 0.1f;
 
     void Awake(){
         if (instance == null)
@@ -108,11 +110,26 @@ void OnCollisionEnter2D(Collision2D collision){
             Debug.Log("🏠 Player가 집에 도착했습니다! GameOver 씬으로 이동");
             spriteRenderer.sprite = happyDogSprite;
             isHome = true;
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("Success");
         }
         else {
             Debug.Log("🍖❌ 뼈다귀를 찾아오세요!");
+            ShowWarningMessage();
         }
+    }
+
+    void ShowWarningMessage()
+    {
+        Debug.Log("⚠️ ShowWarningMessage 호출됨");
+        GetBoneWarning.SetActive(true);    // 패널 보여주기
+        StartCoroutine(HideWarningAfterTime());
+    }
+
+    IEnumerator HideWarningAfterTime()
+    {
+        yield return new WaitForSeconds(warningDisplayTime);
+        Debug.Log("👉 HideWarningMessage 호출됨 (Coroutine)");
+        GetBoneWarning.SetActive(false);
     }
 }
 

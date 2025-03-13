@@ -11,8 +11,11 @@ public class KeySpawner : MonoBehaviour
     private static bool hasSpawned = false;
     private GameObject spawnedKey;
     public BoxCollider2D mapBounds;
+    public float safeMargin = 1.0f;
 
     private Transform player; // 🔥 플레이어 위치
+    private Transform home;
+    public float minDistanceFromHome = 10f;
 
     void Awake()
     {
@@ -36,6 +39,16 @@ public class KeySpawner : MonoBehaviour
         else
         {
             Debug.LogError("⚠️ Player를 찾을 수 없습니다! Player 오브젝트의 태그를 'Player'로 설정하세요.");
+            return;
+        }
+        GameObject homeObj = GameObject.FindGameObjectWithTag("Home");
+        if (homeObj != null)
+        {
+            home = homeObj.transform;
+        }
+        else
+        {
+            Debug.LogError("⚠️ Home을 찾을 수 없습니다! 집 오브젝트의 태그를 'Home'으로 설정하세요.");
             return;
         }
 
@@ -73,7 +86,7 @@ public class KeySpawner : MonoBehaviour
                 return;
             }
 
-        } while (!IsInsideMap(randomPosition));
+        } while (!IsInsideMap(randomPosition) || !IsFarEnoughFromHome(randomPosition));
 
         // 🔥 열쇠 생성
         spawnedKey = Instantiate(itemPrefab, randomPosition, Quaternion.identity);
@@ -90,7 +103,18 @@ public class KeySpawner : MonoBehaviour
     bool IsInsideMap(Vector2 position)
     {
         Bounds bounds = mapBounds.bounds;
-        return position.x >= bounds.min.x && position.x <= bounds.max.x &&
-               position.y >= bounds.min.y && position.y <= bounds.max.y;
+        return position.x >= bounds.min.x + safeMargin && position.x <= bounds.max.x - safeMargin &&
+            position.y >= bounds.min.y + safeMargin && position.y <= bounds.max.y - safeMargin;
     }
+    bool IsFarEnoughFromHome(Vector2 position)
+    {
+    if (home == null)
+    {
+        return true;
+    }
+
+    float distanceToHome = Vector2.Distance(position, home.position);
+    return distanceToHome >= minDistanceFromHome;
+    }
+
 }
