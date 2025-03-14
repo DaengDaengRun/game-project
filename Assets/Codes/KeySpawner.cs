@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KeySpawner : MonoBehaviour
 {
@@ -26,6 +27,12 @@ public class KeySpawner : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
         hasSpawned = true;
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        hasSpawned = false; // 새로운 씬에서 다시 생성할 수 있도록 초기화
     }
 
     void Start()
