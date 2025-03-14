@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HomeSpawner : MonoBehaviour
 {
@@ -24,8 +25,13 @@ public class HomeSpawner : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
         hasSpawned = true;
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        hasSpawned = false; // 새로운 씬에서 다시 집 생성 가능하도록 설정
+    }
 
     void Start()
     {
