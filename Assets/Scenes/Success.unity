@@ -212,7 +212,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1018361369}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e1af25c2b512491ab7b21b8b71505c3, type: 3}
+  m_Script: {fileID: 11500000, guid: b026641c9883049acae617823927c463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1134742144
@@ -324,7 +324,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015258789, y: 0}
+  m_AnchoredPosition: {x: -120, y: -10}
   m_SizeDelta: {x: 66.3835, y: 63.4603}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1163536098
@@ -553,8 +553,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1018361371}
-        m_TargetAssemblyTypeName: NextStageClick, Assembly-CSharp
-        m_MethodName: LoadNextStageSelectScene
+        m_TargetAssemblyTypeName: StartClick, Assembly-CSharp
+        m_MethodName: LoadStageSelectScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
