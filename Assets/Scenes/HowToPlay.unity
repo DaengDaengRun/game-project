@@ -278,7 +278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 48025570}
-  - component: {fileID: 48025569}
+  - component: {fileID: 48025571}
   m_Layer: 0
   m_Name: PlayNow Click
   m_TagString: Untagged
@@ -286,18 +286,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &48025569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 48025568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32a93414fc11340b3af70b34d983106e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &48025570
 Transform:
   m_ObjectHideFlags: 0
@@ -313,6 +301,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &48025571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48025568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b026641c9883049acae617823927c463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &71247310
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,8 +396,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 48025569}
-        m_TargetAssemblyTypeName: S1SelectClick, Assembly-CSharp
+      - m_Target: {fileID: 48025571}
+        m_TargetAssemblyTypeName: StartClick, Assembly-CSharp
         m_MethodName: LoadStageSelectScene
         m_Mode: 1
         m_Arguments:
