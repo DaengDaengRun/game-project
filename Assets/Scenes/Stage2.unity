@@ -3932,7 +3932,7 @@ MonoBehaviour:
   maxDistance: 12
   mapBounds: {fileID: 926354335}
   safeMargin: 1
-  minDistanceFromHome: 10
+  minDistanceFromHome: 15
 --- !u!4 &1798773022
 Transform:
   m_ObjectHideFlags: 0
