@@ -24,6 +24,9 @@ public class Player : MonoBehaviour
     public Sprite findDogSprite;    // 뼈다귀 찾으면 나타나는 캐릭터
     public GameObject GetBoneWarning;
     public float warningDisplayTime = 0.1f;
+    private bool isSuccess = false;
+    public float timeTaken = 0f;
+    public int currentStage = 1;
 
     void Awake(){
         if (instance == null)
@@ -41,6 +44,11 @@ public class Player : MonoBehaviour
         // GetAxis: 움직임이 부드럽게 보정됨
         inputVec.x = Input.GetAxisRaw("Horizontal");
         inputVec.y = Input.GetAxisRaw("Vertical");
+
+        if (!isSuccess)
+        {
+            timeTaken += Time.deltaTime;
+        }
     }
 
     void FixedUpdate(){
@@ -75,6 +83,7 @@ public class Player : MonoBehaviour
     public bool isHome = false; // 집에 도착했는지 여부
 
 void OnCollisionEnter2D(Collision2D collision){
+    int currentStage = PlayerPrefs.GetInt("CurrentStage", 1);
     if (collision.gameObject.CompareTag("Enemy")){
         Debug.Log("⚠️ Enemy와 충돌! 상태: Sick");
         spriteRenderer.sprite = sickDogSprite;
@@ -107,15 +116,50 @@ void OnCollisionEnter2D(Collision2D collision){
     }
     else if (collision.gameObject.CompareTag("Home")){
         if (isFind){
-            Debug.Log("🏠 Player가 집에 도착했습니다! GameOver 씬으로 이동");
             spriteRenderer.sprite = happyDogSprite;
             isHome = true;
+            isSuccess = true;
+            // Debug.Log("성공 시간: "+ timeTaken);
+            // PlayerPrefs.SetFloat("SuccessTime", timeTaken);
+            // PlayerPrefs.SetInt("LastScene", SceneManager.GetActiveScene().buildIndex);
+            // PlayerPrefs.Save();
+            // SceneManager.LoadScene("Success");
+
+            // 각 스테이지의 성공 시간을 저장
+            SaveStageTime();
+
+            // 성공 시간이 기록되었는지 확인
+            Debug.Log("성공 시간 " + currentStage + ":" + timeTaken);
+
+            // 성공 씬으로 이동
             SceneManager.LoadScene("Success");
         }
         else {
             Debug.Log("🍖❌ 뼈다귀를 찾아오세요!");
             ShowWarningMessage();
         }
+    }
+
+    // 현재 스테이지의 시간을 PlayerPrefs에 저장
+    void SaveStageTime()
+    {
+        int currentStage = PlayerPrefs.GetInt("CurrentStage", 1);
+        switch (currentStage)
+        {
+            case 1:
+                PlayerPrefs.SetFloat("Stage1Time", timeTaken);
+                Debug.Log("Stage 1 Time Saved: " + timeTaken);
+                break;
+            case 2:
+                PlayerPrefs.SetFloat("Stage2Time", timeTaken);
+                Debug.Log("Stage 2 Time Saved: " + timeTaken);
+                break;
+            case 3:
+                PlayerPrefs.SetFloat("Stage3Time", timeTaken);
+                Debug.Log("Stage 3 Time Saved: " + timeTaken);
+                break;
+        }
+        PlayerPrefs.Save();
     }
 
     void ShowWarningMessage()
@@ -147,5 +191,11 @@ void OnCollisionEnter2D(Collision2D collision){
             }
         }
     }
-    
+    // 스테이지 전환 시 currentStage 값을 업데이트
+    public void SetCurrentStage(int stage)
+    {
+        currentStage = stage;
+        PlayerPrefs.SetInt("CurrentStage", stage);  // currentStage 값을 PlayerPrefs에 저장
+        PlayerPrefs.Save();
+    }
 }

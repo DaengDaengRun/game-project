@@ -391,7 +391,7 @@ MonoBehaviour:
   isTimeOver: 0
   displayTime: 0
   gameTimeText: {fileID: 660408664}
-  successTimeText: {fileID: 0}
+  successTimeText: {fileID: 660408664}
 --- !u!4 &198594658
 Transform:
   m_ObjectHideFlags: 0
