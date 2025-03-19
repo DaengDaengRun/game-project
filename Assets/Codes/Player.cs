@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     public float speed;
     // 물리적 변화
     Rigidbody2D rigid;
-
+    private Animator anim;
     private SpriteRenderer spriteRenderer;
     private Sprite originalSprite;  // 기존 캐릭터
     public Sprite sickDogSprite;    // 적과 충돌 시 나타나는 캐릭터
@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalSprite = spriteRenderer.sprite;  // 초기 스프라이트 저장
+        anim = GetComponent<Animator>();
     }
 
     // 하나의 프레임마다 한번씩 호출되는 생명주기 함수
@@ -72,6 +73,7 @@ public class Player : MonoBehaviour
 
     void LateUpdate()
     {
+        anim.SetFloat("Speed", inputVec.magnitude);
         if (inputVec.x != 0){
             spriteRenderer.flipX = inputVec.x < 0;
         }
