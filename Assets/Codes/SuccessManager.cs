@@ -1,32 +1,58 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
-public class NewEmptyCSharpScript : MonoBehaviour
+public class SuccessManager : MonoBehaviour
 {
-    public GameObject successPanel;  // 게임 종료 UI 패널
+    public TMP_Text stageTimeText;  // 현재 스테이지 시간 표시용
+    public Button goFasterButton;     // Go Faster 버튼
+    public Button nextStageButton;    // Next Stage 버튼
 
-    void Start()
+    private void Start()
     {
-        successPanel.SetActive(true); // 게임 오버 시 패널 활성화
+        // // 성공 시간 텍스트 설정
+        // float successTime = PlayerPrefs.GetFloat("SuccessTime", 0f);
+        // successTimeText.text = "Success Time: " + successTime.ToString("F1") + "s";
 
-        // 사망 여부 초기화 (다시 플레이할 때 필요)
-        PlayerPrefs.SetInt("IsPlayerDead", 0);
-        PlayerPrefs.Save();
+        // 현재 스테이지에 맞는 성공 시간 불러오기
+        // int currentStage = Player.instance.currentStage;
+        // PlayerPrefs에서 currentStage 값을 불러오기
+        int currentStage = PlayerPrefs.GetInt("CurrentStage", 1);  // Default to Stage 1 if not set
+
+        float stageTime = 0f;
+
+        // 현재 스테이지의 시간만 불러와서 표시
+        switch (currentStage)
+        {
+            case 1:
+                stageTime = PlayerPrefs.GetFloat("Stage1Time", 0f);
+                break;
+            case 2:
+                stageTime = PlayerPrefs.GetFloat("Stage2Time", 0f);
+                break;
+            case 3:
+                stageTime = PlayerPrefs.GetFloat("Stage3Time", 0f);
+                break;
+        }
+
+        // 화면에 현재 스테이지 시간 표시
+        stageTimeText.text = "Stage " + currentStage + " Time: " + stageTime.ToString("F1") + "s";
+
+        // 버튼 클릭 이벤트 설정
+        goFasterButton.onClick.AddListener(GoFaster);
+        nextStageButton.onClick.AddListener(NextStage);
     }
 
-    public void GoToNextStage()
+    // Go Faster 버튼 클릭 시
+    public void GoFaster()
     {
-        int currentStage = PlayerPrefs.GetInt("CurrentStage", 1);
+        int lastSceneIndex = PlayerPrefs.GetInt("LastScene", 0); // 직전 씬 인덱스 저장
+        SceneManager.LoadScene(lastSceneIndex);
+    }
 
-        if (currentStage < 3) // Stage 1 또는 2이면 진행 가능
-        {
-            int nextStage = currentStage + 1;
-            PlayerPrefs.SetInt("CurrentStage", nextStage); // 다음 스테이지 저장
-            PlayerPrefs.Save();
-
-            Debug.Log("다음 스테이지: Stage" + nextStage);
-            SceneManager.LoadScene("Stage" + nextStage); // 다음 스테이지로 이동
-        }
+    // Next Stage 버튼 클릭 시
+    public void NextStage()
+    {
     }
 }
