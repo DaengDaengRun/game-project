@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Success.unity
     guid: 37bd5fe65a8fb45608d8e91ffd587c50
   - enabled: 1
+    path: Assets/Scenes/SuccessEnding.unity
+    guid: e97a59f39b334451db5e50f20c20eb63
+  - enabled: 1
     path: Assets/Scenes/Stage3.unity
     guid: 57eb5bd243adf4ff3a4ee95039cbeb89
   - enabled: 1

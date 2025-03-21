@@ -2128,7 +2128,7 @@ GameObject:
   - component: {fileID: 1872475366}
   - component: {fileID: 1872475365}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: NextButton_Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2704,6 +2704,7 @@ MonoBehaviour:
   stageTimeText: {fileID: 1493010495}
   goFasterButton: {fileID: 1871976726}
   nextStageButton: {fileID: 1243223137}
+  buttonText: {fileID: 1872475365}
 --- !u!4 &2011299470
 Transform:
   m_ObjectHideFlags: 0
