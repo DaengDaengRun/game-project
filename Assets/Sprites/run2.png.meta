@@ -129,9 +129,9 @@ TextureImporter:
       name: run2_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 6
-        width: 27
+        x: 3
+        y: 4
+        width: 25
         height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
