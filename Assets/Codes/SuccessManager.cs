@@ -8,16 +8,10 @@ public class SuccessManager : MonoBehaviour
     public TMP_Text stageTimeText;  // 현재 스테이지 시간 표시용
     public Button goFasterButton;     // Go Faster 버튼
     public Button nextStageButton;    // Next Stage 버튼
+    public TMP_Text buttonText;       // 버튼 텍스트
 
     private void Start()
     {
-        // // 성공 시간 텍스트 설정
-        // float successTime = PlayerPrefs.GetFloat("SuccessTime", 0f);
-        // successTimeText.text = "Success Time: " + successTime.ToString("F1") + "s";
-
-        // 현재 스테이지에 맞는 성공 시간 불러오기
-        // int currentStage = Player.instance.currentStage;
-        // PlayerPrefs에서 currentStage 값을 불러오기
         int currentStage = PlayerPrefs.GetInt("CurrentStage", 1);  // Default to Stage 1 if not set
 
         float stageTime = 0f;
@@ -39,6 +33,13 @@ public class SuccessManager : MonoBehaviour
         // 화면에 현재 스테이지 시간 표시
         stageTimeText.text = "Stage " + currentStage + " Time: " + stageTime.ToString("F1") + "s";
 
+        int stageNum = GameStateManager.Instance.CurrentPlayingStage;
+
+        string message = GetStageClearMessage(stageNum);
+        buttonText.text = message;
+
+        Debug.Log("성공 화면 버튼 문구 설정: " + message);
+
         // 버튼 클릭 이벤트 설정
         goFasterButton.onClick.AddListener(GoFaster);
         nextStageButton.onClick.AddListener(NextStage);
@@ -51,8 +52,44 @@ public class SuccessManager : MonoBehaviour
         SceneManager.LoadScene(lastSceneIndex);
     }
 
+    private string GetStageClearMessage(int stageNum)
+    {
+        switch (stageNum)
+        {
+            case 1:
+                return "Next Stage";
+            case 2:
+                return "Next Stage";
+            case 3:
+                return "Ending";
+            default:
+                return "Next Stage";
+        }
+    } 
+
     // Next Stage 버튼 클릭 시
     public void NextStage()
     {
+        int currentStage = PlayerPrefs.GetInt("CurrentStage", 1);
+        // int currentStage = 3; // 테스트용
+        int nextStage = currentStage + 1;
+
+        // 마지막 스테이지(3)까지 완료했으면 Ending으로
+        if (currentStage == 3)
+        {
+            Debug.Log("🎉 모든 스테이지 클리어! Ending 씬으로 이동");
+            SceneManager.LoadScene("Ending");
+            return;
+        }
+
+        // 다음 스테이지 이름 구성
+        string nextSceneName = "Stage" + nextStage;
+
+        // 다음 스테이지 진입 전 상태 업데이트
+        PlayerPrefs.SetInt("CurrentStage", nextStage);
+        PlayerPrefs.Save();
+
+        Debug.Log("➡️ 다음 스테이지로 이동: " + nextSceneName);
+        SceneManager.LoadScene(nextSceneName);
     }
 }
