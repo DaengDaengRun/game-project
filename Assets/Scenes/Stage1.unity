@@ -2694,6 +2694,7 @@ GameObject:
   - component: {fileID: 1745298234}
   - component: {fileID: 1745298233}
   - component: {fileID: 1745298232}
+  - component: {fileID: 1745298237}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2716,11 +2717,11 @@ MonoBehaviour:
   isDead: 0
   inputVec: {x: 0, y: 0}
   speed: 10
-  sickDogSprite: {fileID: -8814001216525429211, guid: 3363a7a9402a14a628582e2a6588dcfa, type: 3}
-  happyDogSprite: {fileID: 621882668730690745, guid: 6d8cd4ad6523043e59d27bd1c1e8435e, type: 3}
-  findDogSprite: {fileID: 2725912856223093629, guid: 9a5512f1c6af94a2d9849a6e55318bfc, type: 3}
-  GetBoneWarning: {fileID: 1309416408}
-  warningDisplayTime: 2
+  sickDogSprite: {fileID: 0}
+  happyDogSprite: {fileID: 0}
+  findDogSprite: {fileID: 0}
+  GetBoneWarning: {fileID: 0}
+  warningDisplayTime: 0.1
   isHome: 0
 --- !u!70 &1745298233
 CapsuleCollider2D:
@@ -2857,6 +2858,28 @@ Transform:
   - {fileID: 345656928}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1745298237
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745298231}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 00dec81ab173a47dcb83ac8ff98f5dc9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1798773020
 GameObject:
   m_ObjectHideFlags: 0
