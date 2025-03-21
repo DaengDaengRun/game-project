@@ -60,12 +60,6 @@ public class Player : MonoBehaviour
         rigid.MovePosition(rigid.position + nextVec);
     }
 
-    // void OnTriggerEnter2D(Collider2D other){
-    //     if(other.CompareTag("Enemy")){
-    //         Debug.Log("충돌 (Trigger)");
-    //     }
-    // }
-
      void OnMove(InputValue value)
     {
         inputVec = value.Get<Vector2>();
@@ -121,17 +115,22 @@ void OnCollisionEnter2D(Collision2D collision){
             spriteRenderer.sprite = happyDogSprite;
             isHome = true;
             isSuccess = true;
-            // Debug.Log("성공 시간: "+ timeTaken);
-            // PlayerPrefs.SetFloat("SuccessTime", timeTaken);
-            // PlayerPrefs.SetInt("LastScene", SceneManager.GetActiveScene().buildIndex);
-            // PlayerPrefs.Save();
-            // SceneManager.LoadScene("Success");
 
             // 각 스테이지의 성공 시간을 저장
             SaveStageTime();
 
             // 성공 시간이 기록되었는지 확인
             Debug.Log("성공 시간 " + currentStage + ":" + timeTaken);
+
+            if (GameStateManager.Instance != null)
+            {
+                GameStateManager.Instance.SetLastClearedStage(); // 마지막으로 클리어한 스테이지 저장
+                Debug.Log("🏆 GameStateManager: 마지막으로 클리어한 스테이지 업데이트");
+            }
+            else
+            {
+                Debug.LogError("🚨 GameStateManager.Instance가 존재하지 않습니다!");
+            }
 
             // 성공 씬으로 이동
             SceneManager.LoadScene("Success");
@@ -178,7 +177,6 @@ void OnCollisionEnter2D(Collision2D collision){
         GetBoneWarning.SetActive(false);
     }
 }
-
 
     void OnCollisionExit2D(Collision2D collision){
         if (collision.gameObject.CompareTag("Enemy")){
