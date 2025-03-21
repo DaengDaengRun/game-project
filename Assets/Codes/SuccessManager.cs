@@ -81,15 +81,20 @@ public class SuccessManager : MonoBehaviour
             SceneManager.LoadScene("Ending");
             return;
         }
+        else 
+        {
+            Debug.Log("➡️ 다음 스테이지로 이동: " + nextStage);
+            SceneManager.LoadScene("Choose");
+        }
 
-        // 다음 스테이지 이름 구성
-        string nextSceneName = "Stage" + nextStage;
+        // // 다음 스테이지 이름 구성
+        // string nextSceneName = "Stage" + nextStage;
 
-        // 다음 스테이지 진입 전 상태 업데이트
-        PlayerPrefs.SetInt("CurrentStage", nextStage);
-        PlayerPrefs.Save();
+        // // 다음 스테이지 진입 전 상태 업데이트
+        // PlayerPrefs.SetInt("CurrentStage", nextStage);
+        // PlayerPrefs.Save();
 
-        Debug.Log("➡️ 다음 스테이지로 이동: " + nextSceneName);
-        SceneManager.LoadScene(nextSceneName);
+        // Debug.Log("➡️ 다음 스테이지로 이동: " + nextSceneName);
+        // SceneManager.LoadScene(nextSceneName);
     }
 }
