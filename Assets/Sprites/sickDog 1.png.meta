@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1d377aefffe5241869cf890ae5552279
+guid: 51f0efcfcc0684455998ed5b4670dc4e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 725756294040167046
-    second: stand1_0
+      213: -8814001216525429211
+    second: sickDog_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,43 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: stand1_0
+      name: sickDog_0
       rect:
         serializedVersion: 2
         x: 3
-        y: 4
+        y: 5
         width: 25
-        height: 25
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 682a4c31187621a00800000000000000
-      internalID: 725756294040167046
+      spriteID: 526142797906ea580800000000000000
+      internalID: -8814001216525429211
       vertices: []
       indices: 
       edges: []
@@ -161,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      stand1_0: 725756294040167046
+      sickDog_0: -8814001216525429211
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

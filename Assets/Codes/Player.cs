@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     // 물리적 변화
     Rigidbody2D rigid;
     private Animator anim;
+    private bool isSick = false;
     private SpriteRenderer spriteRenderer;
     private Sprite originalSprite;  // 기존 캐릭터
     public Sprite sickDogSprite;    // 적과 충돌 시 나타나는 캐릭터
@@ -50,6 +51,38 @@ public class Player : MonoBehaviour
         {
             timeTaken += Time.deltaTime;
         }
+
+       if (isSick) return; // 아픈 상태일 땐 조작 불가
+
+        // 모든 방향의 이동량을 포함하는 speed 값 설정
+        float move = inputVec.magnitude; 
+        anim.SetFloat("speed", move); // 이동량을 애니메이터에 전달
+
+        if (move != 0)
+        {
+        transform.Translate(inputVec.normalized * Time.deltaTime * 5f);
+        }
+
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            StartCoroutine(SickAnimation());
+        }
+    }
+
+    private IEnumerator SickAnimation()
+    {
+        isSick = true;
+        anim.SetTrigger("isSick");
+
+        yield return new WaitForSeconds(0.5f); // 0.5초 후 복귀
+
+        isSick = false;
+        anim.ResetTrigger("isSick");
     }
 
     void FixedUpdate(){
@@ -67,7 +100,7 @@ public class Player : MonoBehaviour
 
     void LateUpdate()
     {
-        anim.SetFloat("Speed", inputVec.magnitude);
+        anim.SetFloat("speed", inputVec.magnitude);
         if (inputVec.x != 0){
             spriteRenderer.flipX = inputVec.x < 0;
         }
@@ -105,8 +138,8 @@ void OnCollisionEnter2D(Collision2D collision){
     }
     else if (collision.gameObject.CompareTag("Bone")){
         Debug.Log("🍖 Player가 뼈다귀를 찾았습니다!");
-        spriteRenderer.sprite = findDogSprite;
         isFind = true;
+        anim.SetBool("isFind", true); // FindDog 애니메이션 실행
         // 뼈다귀 오브젝트 제거
         Destroy(collision.gameObject);
     }
@@ -183,11 +216,10 @@ void OnCollisionEnter2D(Collision2D collision){
             // 뼈다귀를 찾은 상태라면 충돌 후 다시 findDogSprite로 변경
             if (isFind) {
                 Debug.Log("🍖 적과 충돌 후 뼈다귀 상태로 복귀");
-                spriteRenderer.sprite = findDogSprite;
+                anim.SetBool("isFind", true);
             }
             else{
-                spriteRenderer.sprite = originalSprite; 
-                return;    
+                anim.SetBool("isFind", false); 
             }
         }
     }

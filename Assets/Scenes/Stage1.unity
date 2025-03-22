@@ -391,7 +391,6 @@ MonoBehaviour:
   isTimeOver: 0
   displayTime: 0
   gameTimeText: {fileID: 660408664}
-  successTimeText: {fileID: 660408664}
 --- !u!4 &198594658
 Transform:
   m_ObjectHideFlags: 0
@@ -2695,6 +2694,7 @@ GameObject:
   - component: {fileID: 1745298233}
   - component: {fileID: 1745298232}
   - component: {fileID: 1745298237}
+  - component: {fileID: 1745298238}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2717,11 +2717,13 @@ MonoBehaviour:
   isDead: 0
   inputVec: {x: 0, y: 0}
   speed: 10
-  sickDogSprite: {fileID: 0}
-  happyDogSprite: {fileID: 0}
-  findDogSprite: {fileID: 0}
-  GetBoneWarning: {fileID: 0}
+  sickDogSprite: {fileID: -8814001216525429211, guid: 51f0efcfcc0684455998ed5b4670dc4e, type: 3}
+  happyDogSprite: {fileID: 6406194484928662978, guid: bafc8851c421f470a9353d6357347613, type: 3}
+  findDogSprite: {fileID: 2725912856223093629, guid: 9a5512f1c6af94a2d9849a6e55318bfc, type: 3}
+  GetBoneWarning: {fileID: 1309416408}
   warningDisplayTime: 0.1
+  timeTaken: 0
+  currentStage: 1
   isHome: 0
 --- !u!70 &1745298233
 CapsuleCollider2D:
@@ -2831,7 +2833,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 1480917699468073914, guid: a5da56a53f54f40be9fc03e9048528b5, type: 3}
+  m_Sprite: {fileID: 725756294040167046, guid: 1d377aefffe5241869cf890ae5552279, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2880,6 +2882,52 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!61 &1745298238
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745298231}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5625, y: 1.5625}
+    newSize: {x: 1.5625, y: 1.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.5625, y: 1.5625}
+  m_EdgeRadius: 0
 --- !u!1 &1798773020
 GameObject:
   m_ObjectHideFlags: 0

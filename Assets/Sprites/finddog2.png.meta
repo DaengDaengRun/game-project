@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: df2328ca6c0074a509ff9f1814dd90a0
+guid: ccd877c308b194917a2ce17ef7fada7a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2686302028851980768
-    second: capturebutton_0
-  - first:
-      213: -3259326704116098925
-    second: capturebutton_1
-  - first:
-      213: 2950483467434224260
-    second: capturebutton_2
-  - first:
-      213: -4993805461531636597
-    second: capturebutton_3
+      213: -4159843763902447052
+    second: finddog2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 14
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -135,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: capturebutton_0
+      name: finddog2_0
       rect:
         serializedVersion: 2
-        x: 77
-        y: 255
-        width: 112
-        height: 112
+        x: 1
+        y: 6
+        width: 27
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,74 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0e9222d6679a74520800000000000000
-      internalID: 2686302028851980768
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: capturebutton_1
-      rect:
-        serializedVersion: 2
-        x: 265
-        y: 256
-        width: 111
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 398173a91ab84c2d0800000000000000
-      internalID: -3259326704116098925
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: capturebutton_2
-      rect:
-        serializedVersion: 2
-        x: 77
-        y: 85
-        width: 112
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 48a6410d41932f820800000000000000
-      internalID: 2950483467434224260
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: capturebutton_3
-      rect:
-        serializedVersion: 2
-        x: 264
-        y: 85
-        width: 112
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b8c400c146072bab0800000000000000
-      internalID: -4993805461531636597
+      spriteID: 4328873f2244546c0800000000000000
+      internalID: -4159843763902447052
       vertices: []
       indices: 
       edges: []
@@ -226,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -236,10 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      capturebutton_0: 2686302028851980768
-      capturebutton_1: -3259326704116098925
-      capturebutton_2: 2950483467434224260
-      capturebutton_3: -4993805461531636597
+      finddog2_0: -4159843763902447052
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1d377aefffe5241869cf890ae5552279
+guid: 9c541819c0b244dd4b1ae7ace60fb745
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 725756294040167046
-    second: stand1_0
+      213: -166300878394228457
+    second: finddog1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: stand1_0
+      name: finddog1_0
       rect:
         serializedVersion: 2
         x: 3
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 682a4c31187621a00800000000000000
-      internalID: 725756294040167046
+      spriteID: 7110a717b3e21bdf0800000000000000
+      internalID: -166300878394228457
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      stand1_0: 725756294040167046
+      finddog1_0: -166300878394228457
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
