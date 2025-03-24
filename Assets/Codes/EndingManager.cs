@@ -17,8 +17,8 @@ public class EndingManager : MonoBehaviour
         float stage3Time = PlayerPrefs.GetFloat("Stage3Time", 0f);
 
         // 각 스테이지의 시간을 UI에 표시
-        stage1TimeText.text = "Stage 1 \nSuccess Time: " + stage1Time.ToString("F1") + "s";
-        stage2TimeText.text = "Stage 2 \nSuccess Time: " + stage2Time.ToString("F1") + "s";
-        stage3TimeText.text = "Stage 3 \nSuccess Time: " + stage3Time.ToString("F1") + "s";
+        stage1TimeText.text = "Stage 1 : " + stage1Time.ToString("F1") + "s";
+        stage2TimeText.text = "Stage 2 : " + stage2Time.ToString("F1") + "s";
+        stage3TimeText.text = "Stage 3 : " + stage3Time.ToString("F1") + "s";
     }
 }
