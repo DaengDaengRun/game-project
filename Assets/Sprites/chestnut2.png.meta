@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d4c386d59bf05408d9d7009d8e988b96
+guid: efc9a2084d7254e4b8250f15240d1d0a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4845156034852277500
-    second: chestnut_0
+      213: -5424787610243401930
+    second: chestnut2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -101,7 +101,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -114,7 +114,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,11 +126,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chestnut_0
+      name: chestnut2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
+        y: 0
         width: 16
         height: 15
       alignment: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4033a4dc14c82ccb0800000000000000
-      internalID: -4845156034852277500
+      spriteID: 6377085096847b4b0800000000000000
+      internalID: -5424787610243401930
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      chestnut_0: -4845156034852277500
+      chestnut2_0: -5424787610243401930
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
