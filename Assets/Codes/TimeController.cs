@@ -44,7 +44,7 @@ public class TimeController : MonoBehaviour{
                 }
             }
 
-            gameTimeText.text = "Time Left: " + displayTime.ToString("F1"); 
+            gameTimeText.text = "Time Left: " + displayTime.ToString("F1") + "s"; 
         }
 
         if (isTimeOver && !hasLoggedGameOver) {
