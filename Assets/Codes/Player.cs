@@ -38,6 +38,9 @@ public class Player : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalSprite = spriteRenderer.sprite;  // 초기 스프라이트 저장
         anim = GetComponent<Animator>();
+
+        // 🎯 기본 속도 설정 (인스펙터에서 조절 가능)
+        if (speed <= 0) speed = 5f;
     }
 
     // 하나의 프레임마다 한번씩 호출되는 생명주기 함수
@@ -52,16 +55,18 @@ public class Player : MonoBehaviour
             timeTaken += Time.deltaTime;
         }
 
-       if (isSick) return; // 아픈 상태일 땐 조작 불가
+       Debug.Log("현재 speed 값: " + speed); // 🎯 speed 값 확인
 
-        // 모든 방향의 이동량을 포함하는 speed 값 설정
-        float move = inputVec.magnitude; 
-        anim.SetFloat("speed", move); // 이동량을 애니메이터에 전달
+        if (!isSick) 
+        {
+            float move = inputVec.magnitude;
+            anim.SetFloat("speed", move); 
 
         if (move != 0)
         {
-        transform.Translate(inputVec.normalized * Time.deltaTime * 5f);
+            transform.Translate(inputVec.normalized * Time.deltaTime * speed);
         }
+    }
 
         
     }
@@ -125,10 +130,33 @@ void OnCollisionEnter2D(Collision2D collision){
             hpManager.DecreaseHP(); // HP 감소
         }
 
+        // 🎵 강아지 짖는 소리 재생
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.PlaySFX("DogBark");
+            Debug.Log("🐶 강아지가 짖었습니다!");
+        }
+        else
+        {
+            Debug.LogError("🚨 AudioManager 인스턴스를 찾을 수 없습니다!");
+        }
+
+
         if (collisionCount >= maxCollision){
             isDead = true;
             PlayerPrefs.SetInt("IsPlayerDead", 1); // 사망 여부 저장 (1 = 죽음)
             Debug.Log("💀 Player가 죽었습니다! GameOver 씬으로 이동");
+
+            // 🎵 게임 오버 사운드 재생
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.PlaySFX("GameOver");
+            Debug.Log("🔊 게임 오버 사운드 재생!");
+        }
+        else
+        {
+            Debug.LogError("🚨 AudioManager 인스턴스를 찾을 수 없습니다!");
+        }
             // 현재 씬의 Build Index 저장
             PlayerPrefs.SetInt("LastScene", SceneManager.GetActiveScene().buildIndex);
             PlayerPrefs.Save();
@@ -140,6 +168,18 @@ void OnCollisionEnter2D(Collision2D collision){
         Debug.Log("🍖 Player가 뼈다귀를 찾았습니다!");
         isFind = true;
         anim.SetBool("isFind", true); // FindDog 애니메이션 실행
+
+        // 🎵 뼈다귀 획득 사운드 재생
+        if (AudioManager.instance != null)
+        {
+        AudioManager.instance.PlaySFX("BonePickUp");
+        Debug.Log("🔊 뼈다귀 획득 소리 재생!");
+        }
+
+    else
+    {
+        Debug.LogError("🚨 AudioManager 인스턴스를 찾을 수 없습니다!");
+    }
         // 뼈다귀 오브젝트 제거
         Destroy(collision.gameObject);
     }
@@ -148,6 +188,18 @@ void OnCollisionEnter2D(Collision2D collision){
             spriteRenderer.sprite = happyDogSprite;
             isHome = true;
             isSuccess = true;
+
+            // 🎵 성공 사운드 재생
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlaySFX("SuccessSound");
+                Debug.Log("🔊 성공 사운드 재생!");
+            }
+        else
+            {
+                Debug.LogError("🚨 AudioManager 인스턴스를 찾을 수 없습니다!");
+            }
+
 
             // 각 스테이지의 성공 시간을 저장
             SaveStageTime();
