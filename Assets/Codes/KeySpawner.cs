@@ -15,9 +15,14 @@ public class KeySpawner : MonoBehaviour
     private Transform home;
     private GameObject spawnedKey;
     private static bool hasSpawned = false;
+    public int currentStage = 3;  // 현재 스테이지
+
 
     void Awake()
     {
+        currentStage = PlayerPrefs.GetInt("CurrentStage", 1); // 여기서 안전하게 불러옴
+        Debug.Log($"🎮 현재 스테이지: {currentStage}");
+
         if (hasSpawned)
         {
             Destroy(gameObject);
@@ -44,7 +49,7 @@ public class KeySpawner : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Player를 찾을 수 없습니다");
+            // Debug.LogError("Player를 찾을 수 없습니다");
             return;
         }
         GameObject homeObj = GameObject.FindGameObjectWithTag("Home");
@@ -54,12 +59,12 @@ public class KeySpawner : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Home을 찾을 수 없습니다");
+            // Debug.LogError("Home을 찾을 수 없습니다");
             return;
         }
         if (itemPrefab == null)
         {
-            Debug.LogError("itemPrefab이 설정되지 않았습니다");
+            // Debug.LogError("itemPrefab이 설정되지 않았습니다");
             return;
         }
 
@@ -71,19 +76,31 @@ public class KeySpawner : MonoBehaviour
         );
 
         minDistanceFromHome = Mathf.Clamp(minDistanceFromHome, 0, maxMapDistance / 2f);
-        Debug.Log($"minDistanceFromHome이 자동 조정되었습니다: {minDistanceFromHome}");
+        // Debug.Log($"minDistanceFromHome이 자동 조정되었습니다: {minDistanceFromHome}");
 
         // maxDistance 자동 재조정
         float playerToHomeDistance = Vector2.Distance(player.position, home.position);
         float minMaxDistance = minDistanceFromHome + playerToHomeDistance + 1f;
         if (maxDistance < minMaxDistance)
         {
-            Debug.LogWarning($"maxDistance가 너무 작습니다! 자동으로 {minMaxDistance}로 조정됩니다.");
+            // Debug.LogWarning($"maxDistance가 너무 작습니다! 자동으로 {minMaxDistance}로 조정됩니다.");
             maxDistance = minMaxDistance;
         }
 
+        Vector3 spawnPosition = Vector3.zero;
 
-        SpawnRandomKey();
+        if (currentStage == 3)
+        {
+            Debug.Log("🦴 Stage 3: 집을 고정 위치에 생성합니다.");
+            spawnPosition = new Vector3(-33f, -20f, 0f); // 고정 좌표
+            Debug.Log($"🦴 Stage 3: 뼈다구 위치: {spawnPosition}");
+            spawnedKey = Instantiate(itemPrefab, spawnPosition, Quaternion.identity);
+        }
+        else
+        {
+            SpawnRandomKey();
+        }
+
     }
 
     void SpawnRandomKey()
@@ -94,7 +111,7 @@ public class KeySpawner : MonoBehaviour
 
         if (player == null || home == null || itemPrefab == null)
         {
-            Debug.LogError("필수 객체가 없습니다");
+            // Debug.LogError("필수 객체가 없습니다");
             return;
         }
 
@@ -114,11 +131,11 @@ public class KeySpawner : MonoBehaviour
             bool insideMap = IsInsideMap(randomPosition);
             bool farEnoughFromHome = distanceToHome >= minDistanceFromHome;
 
-            Debug.Log($"▶시도 {attempts}: 위치 {randomPosition}, home까지 거리 {distanceToHome:F2}, 맵 내부: {insideMap}, home에서 충분히 멀리: {farEnoughFromHome}");
+            // Debug.Log($"▶시도 {attempts}: 위치 {randomPosition}, home까지 거리 {distanceToHome:F2}, 맵 내부: {insideMap}, home에서 충분히 멀리: {farEnoughFromHome}");
 
             if (attempts >= maxAttempts)
             {
-                Debug.LogError($"⚠️ {maxAttempts}번 시도 후 실패! minDistanceFromHome: {minDistanceFromHome}, 플레이어 기준 거리: {minDistance}/{maxDistance}");
+                // Debug.LogError($"⚠️ {maxAttempts}번 시도 후 실패! minDistanceFromHome: {minDistanceFromHome}, 플레이어 기준 거리: {minDistance}/{maxDistance}");
                 return;
             }
 
@@ -129,7 +146,7 @@ public class KeySpawner : MonoBehaviour
         spawnedKey.transform.position = randomPosition;
         spawnedKey.SetActive(true);
 
-        Debug.Log($"📌 열쇠 생성 완료! 위치: {randomPosition}, 플레이어 거리: {Vector2.Distance(player.position, randomPosition):F2}, home 거리: {Vector2.Distance(home.position, randomPosition):F2}");
+        // Debug.Log($"📌 열쇠 생성 완료! 위치: {randomPosition}, 플레이어 거리: {Vector2.Distance(player.position, randomPosition):F2}, home 거리: {Vector2.Distance(home.position, randomPosition):F2}");
 
         // 화살표 표시기 세팅
         ArrowIndicator arrowIndicator = FindFirstObjectByType<ArrowIndicator>();
@@ -139,7 +156,7 @@ public class KeySpawner : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("⚠️ ArrowIndicator가 없습니다.");
+            // Debug.LogWarning("⚠️ ArrowIndicator가 없습니다.");
         }
     }
 
