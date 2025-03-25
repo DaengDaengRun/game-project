@@ -11,7 +11,7 @@ public class HPManager : MonoBehaviour
     private List<GameObject> hpIcons = new List<GameObject>(); // HP 아이콘 리스트
 
     private static HPManager instance; // 싱글턴 패턴 적용
-
+ㅓ
     void Awake()
     {
         instance = this;
@@ -22,7 +22,7 @@ public class HPManager : MonoBehaviour
         UpdateHPUI(); // HP 아이콘 생성
     }
 
-    // 🔹 HP 감소 함수 (Player에서 호출)
+    // HP 감소 함수 (Player에서 호출)
     public void DecreaseHP()
     {
         if (currentHP > 0)
@@ -33,7 +33,7 @@ public class HPManager : MonoBehaviour
 
         if (currentHP <= 0)
         {
-            Debug.Log("💀 HP 0 → 게임 종료!");
+            // Debug.Log("💀 HP 0 → 게임 종료!");
             GameOverManager gameOverManager = FindFirstObjectByType<GameOverManager>();
             if (gameOverManager != null)
             {

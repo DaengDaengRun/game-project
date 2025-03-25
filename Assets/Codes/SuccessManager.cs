@@ -38,7 +38,7 @@ public class SuccessManager : MonoBehaviour
         string message = GetStageClearMessage(stageNum);
         buttonText.text = message;
 
-        Debug.Log("성공 화면 버튼 문구 설정: " + message);
+        // Debug.Log("성공 화면 버튼 문구 설정: " + message);
 
         // 버튼 클릭 이벤트 설정
         goFasterButton.onClick.AddListener(GoFaster);
@@ -77,24 +77,14 @@ public class SuccessManager : MonoBehaviour
         // 마지막 스테이지(3)까지 완료했으면 Ending으로
         if (currentStage == 3)
         {
-            Debug.Log("🎉 모든 스테이지 클리어! Ending 씬으로 이동");
+            // Debug.Log("모든 스테이지 클리어! Ending 씬으로 이동");
             SceneManager.LoadScene("Ending");
             return;
         }
         else 
         {
-            Debug.Log("➡️ 다음 스테이지로 이동: " + nextStage);
+            // Debug.Log("➡️ 다음 스테이지로 이동: " + nextStage);
             SceneManager.LoadScene("Choose");
         }
-
-        // // 다음 스테이지 이름 구성
-        // string nextSceneName = "Stage" + nextStage;
-
-        // // 다음 스테이지 진입 전 상태 업데이트
-        // PlayerPrefs.SetInt("CurrentStage", nextStage);
-        // PlayerPrefs.Save();
-
-        // Debug.Log("➡️ 다음 스테이지로 이동: " + nextSceneName);
-        // SceneManager.LoadScene(nextSceneName);
     }
 }

@@ -36,7 +36,7 @@ public class GameStateManager : MonoBehaviour
     public void SetCurrentPlayingStage(int stage)
     {
         CurrentPlayingStage = stage;
-        Debug.Log("🟢 현재 플레이 중인 스테이지: " + CurrentPlayingStage);
+        // Debug.Log("🟢 현재 플레이 중인 스테이지: " + CurrentPlayingStage);
     }
 
     public void SetLastClearedStage()
@@ -44,7 +44,7 @@ public class GameStateManager : MonoBehaviour
         LastClearedStage = CurrentPlayingStage;
         PlayerPrefs.SetInt("LastClearedStage", LastClearedStage);
         PlayerPrefs.Save();
-        Debug.Log("🏆 클리어한 스테이지 업데이트: " + LastClearedStage);
+        // Debug.Log("🏆 클리어한 스테이지 업데이트: " + LastClearedStage);
     }
 
     public int GetLastClearedStage()
@@ -59,7 +59,6 @@ public class GameStateManager : MonoBehaviour
     private void LoadLastClearedStage()
     {
         LastClearedStage = PlayerPrefs.GetInt("LastClearedStage", 0);
-        // Debug.Log("🔄 저장된 마지막 클리어 스테이지 불러오기: " + LastClearedStage);
     }
 
     public void ResetGameProgress()
@@ -70,7 +69,7 @@ public class GameStateManager : MonoBehaviour
         LastClearedStage = 0;
         CurrentPlayingStage = 0;
 
-        Debug.Log("✅ ResetGameProgress 완료: LastClearedStage = 0");
+        // Debug.Log("ResetGameProgress 완료: LastClearedStage = 0");
     }
 
     public void TryUpdateLastClearedStage()

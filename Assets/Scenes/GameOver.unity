@@ -391,7 +391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 882713423}
-  nextStageButton: {fileID: 0}
+  nextStageButton: {fileID: 1189500246}
 --- !u!4 &231768696
 Transform:
   m_ObjectHideFlags: 0

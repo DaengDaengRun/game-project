@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        // 🔥 자동으로 Player 찾기
+        // 자동으로 Player 찾기
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
         {
@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            Debug.LogError("⚠️ Player를 찾을 수 없습니다! `Player`의 태그를 'Player'로 설정하세요.");
+            // Debug.LogError("⚠️ Player를 찾을 수 없습니다! `Player`의 태그를 'Player'로 설정하세요.");
         }
     }
 
@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
             rigid.MovePosition(rigid.position + nextVec);
         }
 
-        rigid.linearVelocity = Vector2.zero; // 🔥 linearVelocity → velocity로 수정
+        rigid.linearVelocity = Vector2.zero; // linearVelocity → velocity로 수정
     }
 
     void LateUpdate()
