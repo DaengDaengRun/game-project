@@ -30,7 +30,7 @@ public class EnemySpawner : MonoBehaviour
     {
         if (player == null || mapBounds == null)
         {
-            Debug.LogWarning("플레이어나 맵 경계가 없습니다.");
+            // Debug.LogWarning("플레이어나 맵 경계가 없습니다.");
             return;
         }
 
@@ -47,7 +47,7 @@ public class EnemySpawner : MonoBehaviour
             attempts++;
             if (attempts >= maxAttempts)
             {
-                Debug.LogError("⚠️ 적절한 적 생성 위치를 찾지 못했습니다! 설정을 확인하세요.");
+                // Debug.LogError("⚠️ 적절한 적 생성 위치를 찾지 못했습니다! 설정을 확인하세요.");
                 return;
             }
 
@@ -55,7 +55,7 @@ public class EnemySpawner : MonoBehaviour
 
         // 적 생성
         Instantiate(enemyPrefab, randomPosition, Quaternion.identity);
-        Debug.Log($"적 생성! 위치: {randomPosition}, 플레이어와 거리: {distanceToPlayer}");
+        // Debug.Log($"적 생성! 위치: {randomPosition}, 플레이어와 거리: {distanceToPlayer}");
     }
 
     // 맵 경계 안에서 랜덤 위치 반환

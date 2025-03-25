@@ -10,7 +10,7 @@ public class PlayerSpawner : MonoBehaviour
     {
         if (mapBounds == null)
         {
-            Debug.LogError("⚠ MapBounds가 설정되지 않았습니다!");
+            // Debug.LogError("⚠ MapBounds가 설정되지 않았습니다!");
             return;
         }
 
@@ -21,10 +21,10 @@ public class PlayerSpawner : MonoBehaviour
     {
         Vector2 spawnPosition = GetRandomPositionInsideMap();
         Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
-        Debug.Log($"🎮 플레이어 스폰 위치: {spawnPosition}");
+        // Debug.Log($"🎮 플레이어 스폰 위치: {spawnPosition}");
     }
 
-    // 📌 맵 경계 내부에서 랜덤 위치 반환
+    // 맵 경계 내부에서 랜덤 위치 반환
     Vector2 GetRandomPositionInsideMap()
     {
         Bounds bounds = mapBounds.bounds;

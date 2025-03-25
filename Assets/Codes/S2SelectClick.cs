@@ -7,7 +7,7 @@ public class S2SelectClick : MonoBehaviour
     {
         if (GameStateManager.Instance == null)
         {
-            Debug.LogError("🚨 GameStateManager.Instance가 존재하지 않습니다! GameStateManager가 씬에 있는지 확인하세요.");
+            // Debug.LogError("🚨 GameStateManager.Instance가 존재하지 않습니다! GameStateManager가 씬에 있는지 확인하세요.");
             return;
         }
 

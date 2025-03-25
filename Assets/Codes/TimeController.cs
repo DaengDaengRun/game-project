@@ -61,7 +61,7 @@ public class TimeController : MonoBehaviour{
             }
             else
             {
-                Debug.LogError("⚠️ GameOverManager를 찾을 수 없습니다! 씬에 추가하세요.");
+                // Debug.LogError("⚠️ GameOverManager를 찾을 수 없습니다! 씬에 추가하세요.");
             }
         }
     }

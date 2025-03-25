@@ -13,7 +13,7 @@ public class StageSelectionManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("🔄 StageSelectionManager 초기화 시작");
+        // Debug.Log("StageSelectionManager 초기화 시작");
         CheckFirstLaunch();              // 1. 초기 실행 여부 확인
         LoadStageProgress();             // 2. 저장된 진행도 불러오기
         UpdateStageUI();                 // 3. 버튼 및 잠금 UI 갱신
@@ -24,7 +24,7 @@ public class StageSelectionManager : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("GameStarted", 0) == 0)
         {
-            Debug.Log("🚀 게임이 처음 실행됨! 진행 정보 초기화");
+            // Debug.Log("게임이 처음 실행됨! 진행 정보 초기화");
             GameStateManager.Instance.ResetGameProgress();
 
             PlayerPrefs.SetInt("GameStarted", 1); // 다시 0으로 두고 있었음 → 1로 변경 필요
@@ -36,10 +36,10 @@ public class StageSelectionManager : MonoBehaviour
     private void LoadStageProgress()
     {
         int lastClearedStage = GameStateManager.Instance.GetLastClearedStage();
-        Debug.Log("🎯 마지막 클리어한 스테이지: " + lastClearedStage);
+        // Debug.Log("마지막 클리어한 스테이지: " + lastClearedStage);
 
         int currentStage = PlayerPrefs.GetInt("CurrentStage", 1);
-        Debug.Log("🎮 현재 플레이 중인 스테이지: " + currentStage);
+        // Debug.Log("현재 플레이 중인 스테이지: " + currentStage);
     }
 
     // 3. 버튼 상태 및 잠금 아이콘 업데이트
@@ -62,13 +62,13 @@ public class StageSelectionManager : MonoBehaviour
         {
             stage2LockIcon.SetActive(false);
             stage2Button.interactable = true;
-            Debug.Log("✅ Stage2 오픈");
+            // Debug.Log("Stage2 오픈");
         }
         if (lastClearedStage >= 2)
         {
             stage3LockIcon.SetActive(false);
             stage3Button.interactable = true;
-            Debug.Log("✅ Stage3 오픈");
+            // Debug.Log("Stage3 오픈");
         }
     }
 }

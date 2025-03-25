@@ -18,7 +18,7 @@ public class ChestnutEnemySpawner : MonoBehaviour
     {
         if (player == null || mapBounds == null)
         {
-            Debug.LogWarning("⚠️ 플레이어나 맵 경계가 설정되지 않았습니다!");
+            // Debug.LogWarning("⚠️ 플레이어나 맵 경계가 설정되지 않았습니다!");
             return;
         }
 
@@ -35,7 +35,7 @@ public class ChestnutEnemySpawner : MonoBehaviour
             attempts++;
             if (attempts >= maxAttempts)
             {
-                Debug.LogError("적절한 적 생성 위치를 찾지 못했습니다. 설정을 확인하세요.");
+                // Debug.LogError("적절한 적 생성 위치를 찾지 못했습니다. 설정을 확인하세요.");
                 return;
             }
 
@@ -43,7 +43,7 @@ public class ChestnutEnemySpawner : MonoBehaviour
 
         // 적 생성
         Instantiate(wanderingEnemyPrefab, randomPosition, Quaternion.identity);
-        Debug.Log($"새로운 랜덤 적 생성! 위치: {randomPosition}");
+        // Debug.Log($"새로운 랜덤 적 생성! 위치: {randomPosition}");
     }
 
     // 울타리 내부에 있는지 체크하는 함수

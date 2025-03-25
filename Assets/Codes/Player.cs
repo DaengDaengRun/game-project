@@ -59,8 +59,9 @@ public class Player : MonoBehaviour
 
         if (!isSick) 
         {
+            // 모든 방향의 이동량을 포함하는 speed 값 설정
             float move = inputVec.magnitude;
-            anim.SetFloat("speed", move); 
+            anim.SetFloat("speed", move); // 이동량을 애니메이터에 전달
 
         if (move != 0)
         {
@@ -119,7 +120,7 @@ public class Player : MonoBehaviour
 void OnCollisionEnter2D(Collision2D collision){
     int currentStage = PlayerPrefs.GetInt("CurrentStage", 1);
     if (collision.gameObject.CompareTag("Enemy")){
-        Debug.Log("⚠️ Enemy와 충돌! 상태: Sick");
+        // Debug.Log("⚠️ Enemy와 충돌! 상태: Sick");
         spriteRenderer.sprite = sickDogSprite;
         collisionCount++;  // 충돌 횟수 증가
 
@@ -147,7 +148,7 @@ void OnCollisionEnter2D(Collision2D collision){
             PlayerPrefs.SetInt("IsPlayerDead", 1); // 사망 여부 저장 (1 = 죽음)
             Debug.Log("💀 Player가 죽었습니다! GameOver 씬으로 이동");
 
-            // 🎵 게임 오버 사운드 재생
+        // 🎵 게임 오버 사운드 재생
         if (AudioManager.instance != null)
         {
             AudioManager.instance.PlaySFX("GameOver");
@@ -165,7 +166,7 @@ void OnCollisionEnter2D(Collision2D collision){
         }
     }
     else if (collision.gameObject.CompareTag("Bone")){
-        Debug.Log("🍖 Player가 뼈다귀를 찾았습니다!");
+        // Debug.Log("🍖 Player가 뼈다귀를 찾았습니다!");
         isFind = true;
         anim.SetBool("isFind", true); // FindDog 애니메이션 실행
 
@@ -195,7 +196,7 @@ void OnCollisionEnter2D(Collision2D collision){
                 AudioManager.instance.PlaySFX("SuccessSound");
                 Debug.Log("🔊 성공 사운드 재생!");
             }
-        else
+            else
             {
                 Debug.LogError("🚨 AudioManager 인스턴스를 찾을 수 없습니다!");
             }
@@ -205,23 +206,23 @@ void OnCollisionEnter2D(Collision2D collision){
             SaveStageTime();
 
             // 성공 시간이 기록되었는지 확인
-            Debug.Log("성공 시간 " + currentStage + ":" + timeTaken);
+            // Debug.Log("성공 시간 " + currentStage + ":" + timeTaken);
 
             if (GameStateManager.Instance != null)
             {
                 GameStateManager.Instance.SetLastClearedStage(); // 마지막으로 클리어한 스테이지 저장
-                Debug.Log("🏆 GameStateManager: 마지막으로 클리어한 스테이지 업데이트");
+                // Debug.Log("🏆 GameStateManager: 마지막으로 클리어한 스테이지 업데이트");
             }
             else
             {
-                Debug.LogError("🚨 GameStateManager.Instance가 존재하지 않습니다!");
+                // Debug.LogError("🚨 GameStateManager.Instance가 존재하지 않습니다!");
             }
 
             // 성공 씬으로 이동
             SceneManager.LoadScene("Success");
         }
         else {
-            Debug.Log("🍖❌ 뼈다귀를 찾아오세요!");
+            // Debug.Log("🍖❌ 뼈다귀를 찾아오세요!");
             ShowWarningMessage();
         }
     }
@@ -234,15 +235,15 @@ void OnCollisionEnter2D(Collision2D collision){
         {
             case 1:
                 PlayerPrefs.SetFloat("Stage1Time", timeTaken);
-                Debug.Log("Stage 1 Time Saved: " + timeTaken);
+                // Debug.Log("Stage 1 Time Saved: " + timeTaken);
                 break;
             case 2:
                 PlayerPrefs.SetFloat("Stage2Time", timeTaken);
-                Debug.Log("Stage 2 Time Saved: " + timeTaken);
+                // Debug.Log("Stage 2 Time Saved: " + timeTaken);
                 break;
             case 3:
                 PlayerPrefs.SetFloat("Stage3Time", timeTaken);
-                Debug.Log("Stage 3 Time Saved: " + timeTaken);
+                // Debug.Log("Stage 3 Time Saved: " + timeTaken);
                 break;
         }
         PlayerPrefs.Save();
@@ -250,7 +251,7 @@ void OnCollisionEnter2D(Collision2D collision){
 
     void ShowWarningMessage()
     {
-        Debug.Log("⚠️ ShowWarningMessage 호출됨");
+        // Debug.Log("⚠️ ShowWarningMessage 호출됨");
         GetBoneWarning.SetActive(true);    // 패널 보여주기
         StartCoroutine(HideWarningAfterTime());
     }
@@ -258,7 +259,7 @@ void OnCollisionEnter2D(Collision2D collision){
     IEnumerator HideWarningAfterTime()
     {
         yield return new WaitForSeconds(warningDisplayTime);
-        Debug.Log("👉 HideWarningMessage 호출됨 (Coroutine)");
+        // Debug.Log("HideWarningMessage 호출됨 (Coroutine)");
         GetBoneWarning.SetActive(false);
     }
 }
@@ -267,7 +268,7 @@ void OnCollisionEnter2D(Collision2D collision){
         if (collision.gameObject.CompareTag("Enemy")){
             // 뼈다귀를 찾은 상태라면 충돌 후 다시 findDogSprite로 변경
             if (isFind) {
-                Debug.Log("🍖 적과 충돌 후 뼈다귀 상태로 복귀");
+                // Debug.Log("🍖 적과 충돌 후 뼈다귀 상태로 복귀");
                 anim.SetBool("isFind", true);
             }
             else{
