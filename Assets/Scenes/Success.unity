@@ -2817,9 +2817,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 5066ad9c7632e40b790eb76124a6d935, type: 3}
-        m_TargetAssemblyTypeName: RestartStage, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1018361371}
+        m_TargetAssemblyTypeName: StartClick, Assembly-CSharp
+        m_MethodName: LoadStageSelectScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
