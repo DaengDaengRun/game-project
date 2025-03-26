@@ -88,7 +88,7 @@ public class HomeSpawner : MonoBehaviour
         else if (currentStage == 2)
         {
             Debug.Log("🏠 Stage 2: 집을 고정 위치에 생성합니다.");
-            int randomIndex = Random.Range(0, stage3Positions.Count);
+            int randomIndex = Random.Range(0, stage2Positions.Count);
             spawnPosition = stage2Positions[randomIndex];
             Debug.Log($"🏠 Stage 2: 집 위치: {spawnPosition}");
             spawnedHome = Instantiate(homePrefab, spawnPosition, Quaternion.identity);
