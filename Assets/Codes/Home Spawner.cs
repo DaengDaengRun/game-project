@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic; // List 사용을 위한 네임스페이스 추가
 
 public class HomeSpawner : MonoBehaviour
 {
@@ -16,6 +17,23 @@ public class HomeSpawner : MonoBehaviour
     private Transform player; // 플레이어 위치
     public float safeMargin = 1.0f;
     public int currentStage = 3;  // 현재 스테이지
+
+
+    // 스테이지 2에서 고정 위치로 생성할 뼈다구 위치
+    private List<Vector3> stage2Positions = new List<Vector3>
+    {
+        new Vector3(7f, -11f, 0f),
+        new Vector3(25f, -11f, 0f),
+        new Vector3(-25f, -8f, 0f),
+    };
+
+    // 스테이지 3에서 고정 위치로 생성할 뼈다구 위치
+    private List<Vector3> stage3Positions = new List<Vector3>
+    {
+        new Vector3(50f, 25f, 0f),
+        new Vector3(50f, -30f, 0f),
+        new Vector3(-32f, 24f, 0f)
+    };
 
     void Awake()
     {
@@ -61,9 +79,18 @@ public class HomeSpawner : MonoBehaviour
 
         if (currentStage == 3)
         {
-            // Debug.Log("🏠 Stage 3: 집을 고정 위치에 생성합니다.");
-            spawnPosition = new Vector3(50f, 25f, 0f); // 고정 좌표
-            // Debug.Log($"🏠 Stage 3: 집 위치: {spawnPosition}");
+            Debug.Log("🏠 Stage 3: 집을 고정 위치에 생성합니다.");
+            int randomIndex = Random.Range(0, stage3Positions.Count);
+            spawnPosition = stage3Positions[randomIndex];
+            Debug.Log($"🏠 Stage 3: 집 위치: {spawnPosition}");
+            spawnedHome = Instantiate(homePrefab, spawnPosition, Quaternion.identity);
+        }
+        else if (currentStage == 2)
+        {
+            Debug.Log("🏠 Stage 2: 집을 고정 위치에 생성합니다.");
+            int randomIndex = Random.Range(0, stage3Positions.Count);
+            spawnPosition = stage2Positions[randomIndex];
+            Debug.Log($"🏠 Stage 2: 집 위치: {spawnPosition}");
             spawnedHome = Instantiate(homePrefab, spawnPosition, Quaternion.identity);
         }
         else

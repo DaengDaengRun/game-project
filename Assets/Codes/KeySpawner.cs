@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic; // List 사용을 위한 네임스페이스 추가
 
 public class KeySpawner : MonoBehaviour
 {
@@ -16,6 +17,23 @@ public class KeySpawner : MonoBehaviour
     private GameObject spawnedKey;
     private static bool hasSpawned = false;
     public int currentStage = 3;  // 현재 스테이지
+
+    // 스테이지 2에서 고정 위치로 생성할 뼈다구 위치
+    private List<Vector3> stage2Positions = new List<Vector3>
+    {
+        new Vector3(23f, 3f, 0f),
+        new Vector3(-20f, 8f, 0f),
+        new Vector3(15f, 8f, 0f),
+    };
+
+
+    // 스테이지 3에서 고정 위치로 생성할 뼈다구 위치
+    private List<Vector3> stage3Positions = new List<Vector3>
+    {
+        new Vector3(-33f, -20f, 0f),
+        new Vector3(-30f, 18f, 0f),
+        new Vector3(45f, -27f, 0f)
+    };
 
 
     void Awake()
@@ -87,13 +105,24 @@ public class KeySpawner : MonoBehaviour
             maxDistance = minMaxDistance;
         }
 
+        // Vector3 spawnPosition = Vector3.zero;
+
         Vector3 spawnPosition = Vector3.zero;
 
         if (currentStage == 3)
         {
             Debug.Log("🦴 Stage 3: 집을 고정 위치에 생성합니다.");
-            spawnPosition = new Vector3(-33f, -20f, 0f); // 고정 좌표
+            int randomIndex = Random.Range(0, stage3Positions.Count);
+            spawnPosition = stage3Positions[randomIndex];
             Debug.Log($"🦴 Stage 3: 뼈다구 위치: {spawnPosition}");
+            spawnedKey = Instantiate(itemPrefab, spawnPosition, Quaternion.identity);
+        }
+        else if (currentStage == 2)
+        {
+            Debug.Log("🦴 Stage 2: 집을 고정 위치에 생성합니다.");
+            int randomIndex = Random.Range(0, stage2Positions.Count);
+            spawnPosition = stage3Positions[randomIndex];
+            Debug.Log($"🦴 Stage 2: 뼈다구 위치: {spawnPosition}");
             spawnedKey = Instantiate(itemPrefab, spawnPosition, Quaternion.identity);
         }
         else

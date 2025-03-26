@@ -11,7 +11,7 @@ public class HPManager : MonoBehaviour
     private List<GameObject> hpIcons = new List<GameObject>(); // HP 아이콘 리스트
 
     private static HPManager instance; // 싱글턴 패턴 적용
-ㅓ
+
     void Awake()
     {
         instance = this;
