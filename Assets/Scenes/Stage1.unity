@@ -1030,7 +1030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 7376592883567336854, guid: 18adb92d484c34ec38aa4369420f86c9, type: 3}
   player: {fileID: 1745298236}
-  spawnInterval: 4
+  spawnInterval: 3
   minDistance: 3
   maxDistance: 10
   spawnAreaSize: 15
@@ -2886,7 +2886,7 @@ MonoBehaviour:
   wanderingEnemyPrefab: {fileID: 2549910802444008248, guid: 7ea6c329ba342426786b468a7adb5f0e, type: 3}
   player: {fileID: 1745298236}
   spawnRadius: 5
-  spawnInterval: 4
+  spawnInterval: 3
   mapBounds: {fileID: 926354335}
   safeMargin: 1
 --- !u!4 &1723337793
