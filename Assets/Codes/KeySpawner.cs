@@ -121,7 +121,7 @@ public class KeySpawner : MonoBehaviour
         {
             Debug.Log("🦴 Stage 2: 집을 고정 위치에 생성합니다.");
             int randomIndex = Random.Range(0, stage2Positions.Count);
-            spawnPosition = stage3Positions[randomIndex];
+            spawnPosition = stage2Positions[randomIndex];
             Debug.Log($"🦴 Stage 2: 뼈다구 위치: {spawnPosition}");
             spawnedKey = Instantiate(itemPrefab, spawnPosition, Quaternion.identity);
         }
