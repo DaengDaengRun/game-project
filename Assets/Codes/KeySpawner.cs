@@ -116,6 +116,7 @@ public class KeySpawner : MonoBehaviour
             spawnPosition = stage3Positions[randomIndex];
             Debug.Log($"🦴 Stage 3: 뼈다구 위치: {spawnPosition}");
             spawnedKey = Instantiate(itemPrefab, spawnPosition, Quaternion.identity);
+            RegisterArrowTarget(spawnedKey); 
         }
         else if (currentStage == 2)
         {
@@ -124,6 +125,7 @@ public class KeySpawner : MonoBehaviour
             spawnPosition = stage2Positions[randomIndex];
             Debug.Log($"🦴 Stage 2: 뼈다구 위치: {spawnPosition}");
             spawnedKey = Instantiate(itemPrefab, spawnPosition, Quaternion.identity);
+            RegisterArrowTarget(spawnedKey); 
         }
         else
         {
@@ -174,6 +176,7 @@ public class KeySpawner : MonoBehaviour
         spawnedKey = Instantiate(itemPrefab, randomPosition, Quaternion.identity);
         spawnedKey.transform.position = randomPosition;
         spawnedKey.SetActive(true);
+        RegisterArrowTarget(spawnedKey);
 
         // Debug.Log($"📌 열쇠 생성 완료! 위치: {randomPosition}, 플레이어 거리: {Vector2.Distance(player.position, randomPosition):F2}, home 거리: {Vector2.Distance(home.position, randomPosition):F2}");
 
@@ -186,6 +189,15 @@ public class KeySpawner : MonoBehaviour
         else
         {
             // Debug.LogWarning("⚠️ ArrowIndicator가 없습니다.");
+        }
+    }
+
+    void RegisterArrowTarget(GameObject key)
+    {
+        ArrowIndicator arrowIndicator = FindFirstObjectByType<ArrowIndicator>();
+        if (arrowIndicator != null)
+        {
+            arrowIndicator.SetBoneTarget(key.transform);
         }
     }
 
