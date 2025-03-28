@@ -27,7 +27,7 @@ public class ArrowIndicator : MonoBehaviour
 
     void Update()
     {
-        if (boneTarget == null)
+        if (boneTarget == null || !boneTarget.gameObject.activeInHierarchy)
         {
             arrowCanvasGroup.alpha = 0; // 뼈다귀 없으면 화살표 숨기기
             return;
