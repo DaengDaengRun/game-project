@@ -876,11 +876,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 22fe627f-d7a8-4d32-9c40-88cf577aa0a7
+  cloudProjectId: 8ffa9fc7-a703-4fb4-824b-118a0a2cb767
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: DaengDaengRun
-  organizationId: eenuyya
+  projectName: DaengDaengRun (1)
+  organizationId: hyecircle
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
