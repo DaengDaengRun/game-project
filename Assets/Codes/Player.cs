@@ -30,10 +30,8 @@ public class Player : MonoBehaviour
     public int currentStage = 1;
 
     void Awake(){
-        if (instance == null)
-        {
-            instance = this;
-        }        
+        if (instance == null) instance = this;
+               
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalSprite = spriteRenderer.sprite;  // 초기 스프라이트 저장
@@ -50,23 +48,18 @@ public class Player : MonoBehaviour
         inputVec.x = Input.GetAxisRaw("Horizontal");
         inputVec.y = Input.GetAxisRaw("Vertical");
 
-        if (!isSuccess)
-        {
-            timeTaken += Time.deltaTime;
-        }
+        if (!isSuccess) timeTaken += Time.deltaTime;
+        
 
-       Debug.Log("현재 speed 값: " + speed); // 🎯 speed 값 확인
+        Debug.Log("현재 speed 값: " + speed); // 🎯 speed 값 확인
 
         if (!isSick) 
         {
-            // 모든 방향의 이동량을 포함하는 speed 값 설정
-            float move = inputVec.magnitude;
+            float move = inputVec.magnitude; // 모든 방향의 이동량을 포함하는 speed 값 설정
             anim.SetFloat("speed", move); // 이동량을 애니메이터에 전달
 
-        if (move != 0)
-        {
-            transform.Translate(inputVec.normalized * Time.deltaTime * speed);
-        }
+        if (move != 0) transform.Translate(inputVec.normalized * Time.deltaTime * speed);
+        
     }
 
         
@@ -116,10 +109,16 @@ public class Player : MonoBehaviour
     private int maxCollision = 3;
     private bool isFind = false; // 뼈다귀를 찾았는지 여부
     public bool isHome = false; // 집에 도착했는지 여부
+    private bool isInvincible = false;  // 무적 상태 여부
+    public float invincibleDuration = 1f; // 무적 지속 시간 (초)
 
 void OnCollisionEnter2D(Collision2D collision){
     int currentStage = PlayerPrefs.GetInt("CurrentStage", 1);
     if (collision.gameObject.CompareTag("Enemy")){
+        if (isInvincible) return; // 무적 상태라면 HP 깎이지 않음
+
+        // 🛑 무적 상태 시작!
+        StartCoroutine(BecomeInvincible());
         // Debug.Log("⚠️ Enemy와 충돌! 상태: Sick");
         spriteRenderer.sprite = sickDogSprite;
         collisionCount++;  // 충돌 횟수 증가
@@ -225,7 +224,11 @@ void OnCollisionEnter2D(Collision2D collision){
             // Debug.Log("🍖❌ 뼈다귀를 찾아오세요!");
             ShowWarningMessage();
         }
+
+        
     }
+
+    
 
     // 현재 스테이지의 시간을 PlayerPrefs에 저장
     void SaveStageTime()
@@ -262,6 +265,24 @@ void OnCollisionEnter2D(Collision2D collision){
         // Debug.Log("HideWarningMessage 호출됨 (Coroutine)");
         GetBoneWarning.SetActive(false);
     }
+}
+
+// 🎯 무적 상태 처리 (일정 시간 후 해제)
+private IEnumerator BecomeInvincible()
+{
+    isInvincible = true;
+
+    // 🔥 시각적 효과 (반짝이는 효과)
+    for (int i = 0; i < 5; i++)
+    {
+        spriteRenderer.enabled = false;
+        yield return new WaitForSeconds(0.1f);
+        spriteRenderer.enabled = true;
+        yield return new WaitForSeconds(0.1f);
+    }
+
+    yield return new WaitForSeconds(invincibleDuration); // 무적 시간 유지
+    isInvincible = false; // 무적 해제
 }
 
     void OnCollisionExit2D(Collision2D collision){

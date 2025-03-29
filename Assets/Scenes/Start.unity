@@ -1141,6 +1141,7 @@ GameObject:
   - component: {fileID: 503536505}
   - component: {fileID: 503536504}
   - component: {fileID: 503536503}
+  - component: {fileID: 503536506}
   m_Layer: 5
   m_Name: X Button
   m_TagString: Untagged
@@ -1262,6 +1263,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503536501}
   m_CullTransparentMesh: 1
+--- !u!114 &503536506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503536501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9223aa6bb8b12447c8b6daa74119edbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &508351364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,6 +1287,7 @@ GameObject:
   - component: {fileID: 508351367}
   - component: {fileID: 508351366}
   - component: {fileID: 508351365}
+  - component: {fileID: 508351370}
   m_Layer: 5
   m_Name: Setting Button
   m_TagString: Untagged
@@ -1396,37 +1410,18 @@ RectTransform:
   m_AnchoredPosition: {x: 388, y: 172}
   m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &514291164
-GameObject:
+--- !u!114 &508351370
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 514291165}
-  m_Layer: 0
-  m_Name: test
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &514291165
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514291164}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 370.4096, y: 215.17685, z: 0.13077626}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 508351364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9223aa6bb8b12447c8b6daa74119edbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &565310538
 GameObject:
   m_ObjectHideFlags: 0
@@ -3896,4 +3891,3 @@ SceneRoots:
   - {fileID: 960792479}
   - {fileID: 1374468108}
   - {fileID: 1916054153}
-  - {fileID: 514291165}
